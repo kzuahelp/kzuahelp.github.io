@@ -128,7 +128,7 @@ ru-UA:
   statistics: "Надано допомоги на суму понад"
 en-US:
   title: "Ukraine, we are with you!"
-  description: "Humanitarian Support Headquarters for Ukraine in Kazakhstan "
-  statistics: "Aid provided in"
+  description: "Humanitarian Aid Headquarters for Ukraine in Kazakhstan "
+  statistics: "We collected humanitarian aid worth over"
 </i18n>
 
