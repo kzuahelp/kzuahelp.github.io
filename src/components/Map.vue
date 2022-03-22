@@ -12,7 +12,8 @@ const attribution = '<a target="_blank" href="http://osm.org/copyright">OpenStre
     :minZoom="9"
     :maxZoom="19"
     :options="{
-      scrollWheelZoom: false
+      scrollWheelZoom: false,
+      dragging: false,
     }"
     :center="[51.14916, 71.40489]"
   >
