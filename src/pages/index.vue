@@ -577,7 +577,7 @@ ru-RU:
   become-volunteer-description:
     <p>Штаб гуманитарной поддержки Украины проводит набор волонтеров на разные позиции.</p>
     <ul>
-    <li>Физичесое участие в сборе помощи — приём, упаковка, маркировка, погрузка.</li>
+    <li>Физическое участие в сборе помощи — приём, упаковка, маркировка, погрузка.</li>
     <li>Онлайн участие — консультирование, SMM, дизайн, перевод, поиск информации и прочее.</li>
     <li>Организационная деятельность в сборе помощи.</li>
     </ul>
@@ -681,39 +681,39 @@ ru-UA:
   arman-shuraev-action: "Підтримав ініціативу Ел Болаша, організував плов для волонтерів, які сортували і завантажували гуманітарну допомогу, виділив 1 мільйон тенге на харчування волонтерів."
 
 en-US:
-  title: "Humanitarian Support Headquarters for Ukraine in Kazakhstan"
+  title: "Humanitarian Aid Headquarters for Ukraine in Kazakhstan"
   give-things: "Bring humanitarian aid"
-  send-money: "Send money "
+  send-money: "Send money"
   become-volunteer: "Become a volunteer"
   our-mission: "Our mission"
   our-mission-description:
-    <p>Our movement to collect humanitarian aid began on February 25 with the statement of the El Bolashagy civil initiative.</p>
-    <p>El bolashagy launched a movement, organized volunteers, called on Kazakhstanis to help the civilian population of Ukraine, which right now needs emergency humanitarian assistance in a war.</p>
-    <p>Since March 13, Yel bolashagy has retired from the movement, and volunteers themselves, ordinary Kazakhstanis from the Humanitarian Support Headquarters of Ukraine, are now organizing humanitarian aid to Ukraine.</p>
-    <p>As of March 5, more than 150 million tenge was received from caring Kazakhstanis.</p>
-    <p>Our headquarters in social networks:</p> 
+    <p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
+    <p><i>El bolashagy</i> started the movement, organized volunteers, and called on Kazakhstanis to help the civilian population of Ukraine that needs emergency humanitarian assistance in times of war.</p>
+    <p>After <i>El bolashagy</i> withdrew from the movement on March 13, the initiative was taken over by volunteers — ordinary Kazakhstanis from the Humanitarian Aid Headquarters. Now they are organizing and sending humanitarian aid to Ukraine on their own.</p>
+    <p>As of March 5, more than 150 million tenge (around $300.000) were raised by caring Kazakhstanis.</p>
+    <p>Our headquarters on social networks:</p> 
   how-can-you-help: "How can you help?"
   medicines: "Medical devices and medicines"
   food: "Food"
   for-childs: "For children"
   field-medicine: "Field medicine"
-  point-place: "The point of acceptance of humanitarian aid is located at the Embassy of Ukraine in the Republic of Kazakhstan at the address:"
-  point-place-working-time: "Time for receiving humanitarian aid:"
+  point-place: "Humanitarian aid reception facility is located at the Embassy of Ukraine in the Republic of Kazakhstan at the address:"
+  point-place-working-time: "Humanitarian aid reception hours:"
   point-place-working-time-diapason: "from 9:00 to 20:00 every day"
-  card-to-bank: "Transfer funds from the card to Nat. Bank of Ukraine:"
-  transfer-to-embasy: "Transfer funds to the account of the Embassy using the details:"
+  card-to-bank: "Transfer funds to Nat. Bank of Ukraine via a bank card:"
+  transfer-to-embasy: "Transfer funds to the Embassy using the following bank details:"
   go-to-bank-website: "Go to the bank's website"
   become-volunteer-description:
-    <p>The Humanitarian Support Headquarters of Ukraine is recruiting volunteers for various positions.</p>
+    <p>The Humanitarian Aid Headquarters for Ukraine is recruiting volunteers for various positions.</p>
     <ul>
     <li>Physical participation in the collection of aid - receiving, packaging, labeling, loading.</li>
     <li>Online participation - consulting, SMM, design, translation, information search and more.</li>
     <li>Organizational activities in fundraising.</li>
     </ul>
     <p>Perhaps it is your abilities and skills that will be useful to us.</p>
-  volunteer-form: "Fill out a volunteer form"
+  volunteer-form: "Volunteer application form"
   our-friends: "They help us"
-  gratitude: "Gratitude"
+  gratitude: "Acknowledgement"
   appeal-description:
     <p>Address of the wife of the Ambassador of Ukraine to the Republic of Kazakhstan on International Women's Day to the women of Kazakhstan:</p>
   appeal:
@@ -721,6 +721,6 @@ en-US:
   oksana-vrublevskaya: "Oksana Vrublevskaya"
   arman-shuraev: "Arman Shuraev"
   arman-shuraev-position: "Public figure and entrepreneur"
-  arman-shuraev-action: "He supported the initiative of El bolashagy, organized pilaf for volunteers who sorted and loaded humanitarian aid, allocated 1 million tenge for food for volunteers."
+  arman-shuraev-action: "He supported the initiative of El bolashagy, organized a party for the volunteers who sorted and loaded humanitarian aid, allocated 1 million tenge for food for volunteers."
 </i18n>
 
