@@ -706,7 +706,7 @@ en-US:
   become-volunteer-description:
     <p>The Humanitarian Aid Headquarters for Ukraine is recruiting volunteers for various positions.</p>
     <ul>
-    <li>Physical participation in the collection of aid - receiving, packaging, labeling, loading.</li>
+    <li>On-site assistance: humanitarian aid acceptance, packaging, labeling, loading.</li>
     <li>Online participation - consulting, SMM, design, translation, information search and more.</li>
     <li>Organizational activities in fundraising.</li>
     </ul>
