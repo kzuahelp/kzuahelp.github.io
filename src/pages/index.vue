@@ -558,11 +558,11 @@ ru-RU:
   become-volunteer: "Стать волонтёром"
   our-mission: "Наша миссия"
   our-mission-description:
-    <p>Наше движение по сбору гуманитарной помощи началось 25 февраля с заявления гражданской инициативы Ел болашағы.</p>
+    "<p>Наше движение по сбору гуманитарной помощи началось 25 февраля с заявления гражданской инициативы Ел болашағы.</p>
     <p>Ел болашағы запустил движение, организовал волонтеров, призвал казахстанцев помогать мирному населению Украины, которое прямо сейчас нуждается в экстренной гуманитарной помощи в условиях войны.</p>
     <p>С 13 марта Ел болашағы отошел от движения, и организацией гуманитарной помощи в Украину теперь занимаются сами волонтеры, обычные казахстанцы из Штаба гуманитарной поддержки Украины.</p>
     <p>На 5 марта поступило более 150 млн тенге от неравнодушных казахстанцев.</p>
-    <p>Наш штаб в социальных сетях:</p>
+    <p>Наш штаб в социальных сетях:</p>"
   how-can-you-help: "Как вы можете помочь?"
   medicines: "Медицинские приборы и лекарства"
   food: "Продукты питания"
@@ -575,20 +575,20 @@ ru-RU:
   transfer-to-embasy: "Переведите средства на счет Посольства по реквизитам:"
   go-to-bank-website: "Перейти на сайт банка"
   become-volunteer-description:
-    <p>Штаб гуманитарной поддержки Украины проводит набор волонтеров на разные позиции.</p>
+    "<p>Штаб гуманитарной поддержки Украины проводит набор волонтеров на разные позиции.</p>
     <ul>
     <li>Физическое участие в сборе помощи — приём, упаковка, маркировка, погрузка.</li>
     <li>Онлайн участие — консультирование, SMM, дизайн, перевод, поиск информации и прочее.</li>
     <li>Организационная деятельность в сборе помощи.</li>
     </ul>
-    <p>Возможно, именно ваши способности и навыки нам пригодятся.</p>
+    <p>Возможно, именно ваши способности и навыки нам пригодятся.</p>"
   volunteer-form: "Заполнить анкету волонтёра"
   our-friends: "Нам помогают"
   gratitude: "Благодарность"
   appeal-description:
-    <p>Обращение супруги Посла Украины в Республике Казахстан в международный женский день к женщинам Казахстана:</p>
+    "<p>Обращение супруги Посла Украины в Республике Казахстан в международный женский день к женщинам Казахстана:</p>"
   appeal:
-    Дорогие казахстанские сестры, сегодня в наш праздник хочу сказать вам рахмет за ваш труд, за то, что вы работаете волонтёрами, помогая моей родной стране в любую погоду. За то, что вы везёте иногда последнее из своего дома, освобождая аптечку, надеясь, что это поможет нашим женщинам и детям. За ваши памперсы, пелёнки и детское питание, которое в огромных количествах уже уехало в Украину и продолжает уезжать каждый день. Я благодарю вас за такую невероятную поддержку, за такую волну сопереживания и сочувствия, которую мы получаем.
+    "Дорогие казахстанские сестры, сегодня в наш праздник хочу сказать вам рахмет за ваш труд, за то, что вы работаете волонтёрами, помогая моей родной стране в любую погоду. За то, что вы везёте иногда последнее из своего дома, освобождая аптечку, надеясь, что это поможет нашим женщинам и детям. За ваши памперсы, пелёнки и детское питание, которое в огромных количествах уже уехало в Украину и продолжает уезжать каждый день. Я благодарю вас за такую невероятную поддержку, за такую волну сопереживания и сочувствия, которую мы получаем."
   oksana-vrublevskaya: "Оксана Врублевская"
   arman-shuraev: "Арман Шураев"
   arman-shuraev-position: "Общественный деятель и предприниматель"
@@ -601,11 +601,11 @@ kk-KZ:
   become-volunteer: "Волонтер болыңыз"
   our-mission: "Біздің миссиямыз"
   our-mission-description:
-    <p>Біздің гуманитарлық көмек жинау қозғалысы 25 ақпанда «Ел болашағы» азаматтық бастамасын жариялаумен басталды.</p>
+    "<p>Біздің гуманитарлық көмек жинау қозғалысы 25 ақпанда «Ел болашағы» азаматтық бастамасын жариялаумен басталды.</p>
     <p>Ел болашағы» қозғалысын бастады, еріктілер ұйымдастырды, қазақстандықтарды дәл қазір соғыс кезінде шұғыл гуманитарлық көмекке мұқтаж Украинаның бейбіт тұрғындарына көмектесуге шақырды.</p>
     <p>13 наурыздан бастап «Ел болашағы» қозғалысынан зейнеткерлікке шықты және Украинаның гуманитарлық қолдау штабындағы еріктілердің өздері, қарапайым қазақстандықтар қазір Украинаға гуманитарлық көмек ұйымдастыруда.</p>
     <p>5 наурыздағы жағдай бойынша қамқор қазақстандықтардан 150 миллион теңгеден астам қаржы түсті.</p>
-    <p>Әлеуметтік желілердегі бас кеңсеміз:</p>
+    <p>Әлеуметтік желілердегі бас кеңсеміз:</p>"
   how-can-you-help: "Сіз қалай көмектесе аласыз?"
   medicines: "Медициналық бұйымдар мен дәрі-дәрмектер"
   food: "Азық-түлік"
@@ -618,20 +618,20 @@ kk-KZ:
   transfer-to-embasy: "Мәліметтерді пайдалана отырып, Елшіліктің шотына ақша аударыңыз:"
   go-to-bank-website: "Банктің веб-сайтына өтіңіз"
   become-volunteer-description:
-    <p>Украинаның гуманитарлық қолдау штабы әртүрлі лауазымдарға еріктілерді тартуда.</p>
+    "<p>Украинаның гуманитарлық қолдау штабы әртүрлі лауазымдарға еріктілерді тартуда.</p>
     <ul>
     <li>Көмекті жинауға физикалық қатысу - қабылдау, орау, таңбалау, тиеу.</li>
     <li>Онлайн қатысу - кеңес беру, SMM, дизайн, аударма, ақпаратты іздеу және т.б..</li>
     <li>Қаражат жинаудағы ұйымдық әрекеттер.</li>
     </ul>
-    <p>Сіздің қабілеттеріңіз бен дағдыларыңыз бізге пайдалы болуы мүмкін.</p>
+    <p>Сіздің қабілеттеріңіз бен дағдыларыңыз бізге пайдалы болуы мүмкін.</p>"
   volunteer-form: "Волонтер формасын толтырыңыз"
   our-friends: "Олар бізге көмектеседі"
   gratitude: "Алғыс"
   appeal-description:
-    <p>Украинаның Қазақстан Республикасындағы Елшісінің әйелінің Халықаралық әйелдер күніне арналған Қазақстан әйелдеріне арнаған үндеуі:</p>
+    "<p>Украинаның Қазақстан Республикасындағы Елшісінің әйелінің Халықаралық әйелдер күніне арналған Қазақстан әйелдеріне арнаған үндеуі:</p>"
   appeal:
-    Құрметті қазақ əпкелері, бүгінгі мерекемізде мен сіздерге рақмет ағаларыңызға еңбектеріңіз үшін, қандай ауа-райында да туған еліме көмектесіп, ерікті болып еңбек етіп жатқандарыңыз үшін айтқым келеді. Сіз кейде үйіңізден соңғы затты көтеріп, аптечканы босатып, бұл біздің әйелдер мен балаларымызға көмектеседі деп үміттенгеніңіз үшін. Сіздің жаялықтарыңыз, жөргектеріңіз және балалар тағамы үшін, олар қазірдің өзінде Украинаға көп мөлшерде кетіп қалған және күн сайын кетуді жалғастыруда. Мен осындай керемет қолдау үшін, біз алатын осындай жанашырлық пен жанашырлық толқыны үшін алғыс айтамын.
+    "Құрметті қазақ əпкелері, бүгінгі мерекемізде мен сіздерге рақмет ағаларыңызға еңбектеріңіз үшін, қандай ауа-райында да туған еліме көмектесіп, ерікті болып еңбек етіп жатқандарыңыз үшін айтқым келеді. Сіз кейде үйіңізден соңғы затты көтеріп, аптечканы босатып, бұл біздің әйелдер мен балаларымызға көмектеседі деп үміттенгеніңіз үшін. Сіздің жаялықтарыңыз, жөргектеріңіз және балалар тағамы үшін, олар қазірдің өзінде Украинаға көп мөлшерде кетіп қалған және күн сайын кетуді жалғастыруда. Мен осындай керемет қолдау үшін, біз алатын осындай жанашырлық пен жанашырлық толқыны үшін алғыс айтамын."
   oksana-vrublevskaya: "Оксана Врублевская" 
   arman-shuraev: "Арман Шураев"
   arman-shuraev-position: "Қоғам қайраткері және кәсіпкер"
@@ -644,11 +644,11 @@ ru-UA:
   become-volunteer: "Стати волонтером"
   our-mission: "Наша місія"
   our-mission-description:
-    <p>Наш рух зі збору гуманітарної допомоги розпочався 25 лютого із заяви громадянської ініціативи Ел болашағи.</p>
+    "<p>Наш рух зі збору гуманітарної допомоги розпочався 25 лютого із заяви громадянської ініціативи Ел болашағи.</p>
     <p>Ел болашағи запустив рух, організував волонтерів, закликав казахстанців допомагати мирному населенню України, яке прямо зараз потребує екстреної гуманітарної допомоги в умовах війни.</p>
     <p>З 13 березня Ел болашағи відійшов від руху, і організацією гуманітарної допомоги в Україну тепер займаються тільки волонтери, звичайні казахстанці зі Штабу гуманітарної підтримки України.</p>
     <p>Станом на 5 березня надійшло понад 150 млн тенге від небайдужих казахстанців.</p>
-    <p>Наш штаб у соціальних мережах:</p>
+    <p>Наш штаб у соціальних мережах:</p>"
   how-can-you-help: "Як ви можете допомогти?"
   medicines: "Медичні прилади та ліки"
   food: "Продукти харчування"
@@ -661,20 +661,20 @@ ru-UA:
   transfer-to-embasy: "Зробити переказ коштів на рахунок Посольства за реквізитами:"
   go-to-bank-website: "Перейти на сайт банку"
   become-volunteer-description:
-    <p>Штаб гуманітарної підтримки України проводить набір волонтерів на різні позиції.</p>
+    "<p>Штаб гуманітарної підтримки України проводить набір волонтерів на різні позиції.</p>
     <ul>
     <li>Фізична участь у зборі допомоги - прийом, пакування, маркування, завантаження.</li>
     <li>Онлайн участь — консультування, SMM, дизайн, переклад, пошук інформації та інше.</li>
     <li>Організаційна діяльність у зборі допомоги.</li>
     </ul>
-    <p>Можливо, саме Ваші здібності та навички нам знадобляться.</p>
+    <p>Можливо, саме Ваші здібності та навички нам знадобляться.</p>"
   volunteer-form: "Заповнити анкету волонтера"
   our-friends: "Нам допомагають"
   gratitude: "Подяка"
   appeal-description:
-    <p>Звернення дружини Посла України у Республіці Казахстан у Міжнародний жіночий день до жінок Казахстану:</p>
+    "<p>Звернення дружини Посла України у Республіці Казахстан у Міжнародний жіночий день до жінок Казахстану:</p>"
   appeal:
-    Дорогі казахстанські сестри, сьогодні у наше свято хочу сказати вам рахмет за вашу працю, за те, що ви працюєте волонтерами, допомагаючи моїй рідній країні за будь-якої погоди. За те, що ви везете іноді останнє зі свого будинку, спустошуючи аптечку, сподіваючись, що це допоможе нашим жінкам та дітям. За ваші памперси, пелюшки та дитяче харчування, яке у величезних кількостях вже поїхало в Україну та продовжує їхати щодня. Я дякую вам за таку неймовірну підтримку, за таку хвилю співпереживання та співчуття, яку ми отримуємо.
+    "Дорогі казахстанські сестри, сьогодні у наше свято хочу сказати вам рахмет за вашу працю, за те, що ви працюєте волонтерами, допомагаючи моїй рідній країні за будь-якої погоди. За те, що ви везете іноді останнє зі свого будинку, спустошуючи аптечку, сподіваючись, що це допоможе нашим жінкам та дітям. За ваші памперси, пелюшки та дитяче харчування, яке у величезних кількостях вже поїхало в Україну та продовжує їхати щодня. Я дякую вам за таку неймовірну підтримку, за таку хвилю співпереживання та співчуття, яку ми отримуємо."
   oksana-vrublevskaya: "Оксана Врубльовська"
   arman-shuraev: "Арман Шураєв"
   arman-shuraev-position: "Громадський діяч та підприємець"
@@ -687,11 +687,11 @@ en-US:
   become-volunteer: "Become a volunteer"
   our-mission: "Our mission"
   our-mission-description:
-    <p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
+    "<p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
     <p><i>El bolashagy</i> started the movement, organized volunteers, and called on Kazakhstanis to help the civilian population of Ukraine that needs emergency humanitarian assistance in times of war.</p>
     <p>After <i>El bolashagy</i> withdrew from the movement on March 13, the initiative was taken over by volunteers — ordinary Kazakhstanis from the Humanitarian Aid Headquarters. Now they are organizing and sending humanitarian aid to Ukraine on their own.</p>
     <p>As of March 5, more than 150 million tenge (around $300.000) were raised by caring Kazakhstanis.</p>
-    <p>Our headquarters on social networks:</p> 
+    <p>Our headquarters on social networks:</p>"
   how-can-you-help: "How can you help?"
   medicines: "Medical devices and medicines"
   food: "Food"
@@ -704,20 +704,20 @@ en-US:
   transfer-to-embasy: "Transfer funds to the Embassy using the following bank details:"
   go-to-bank-website: "Go to the bank's website"
   become-volunteer-description:
-    <p>The Humanitarian Aid Headquarters for Ukraine is recruiting volunteers for various positions.</p>
+    "<p>The Humanitarian Aid Headquarters for Ukraine is recruiting volunteers for various positions.</p>
     <ul>
     <li>On-site assistance: humanitarian aid acceptance, packaging, labeling, loading.</li>
     <li>Online participation - consulting, SMM, design, translation, information search and more.</li>
     <li>Organizational activities in fundraising.</li>
     </ul>
-    <p>Perhaps it is your abilities and skills that will be useful to us.</p>
+    <p>Perhaps it is your abilities and skills that will be useful to us.</p>"
   volunteer-form: "Volunteer application form"
   our-friends: "They help us"
   gratitude: "Acknowledgement"
   appeal-description:
-    <p>Address of the wife of the Ambassador of Ukraine to the Republic of Kazakhstan on International Women's Day to the women of Kazakhstan:</p>
+    "<p>Address of the wife of the Ambassador of Ukraine to the Republic of Kazakhstan on International Women's Day to the women of Kazakhstan:</p>"
   appeal:
-    Dear Kazakh sisters, today on our holiday I want to tell you rakhmet for your work, for the fact that you work as volunteers, helping my native country in any weather. For the fact that you sometimes carry the last thing from your house, emptying the first-aid kit, hoping that this will help our women and children. For your diapers, diapers and baby food, which have already left in huge quantities for Ukraine and continue to leave every day. I thank you for such incredible support, for such a wave of empathy and sympathy that we receive.
+    "Dear Kazakh sisters, today on our holiday I want to tell you rakhmet for your work, for the fact that you work as volunteers, helping my native country in any weather. For the fact that you sometimes carry the last thing from your house, emptying the first-aid kit, hoping that this will help our women and children. For your diapers, diapers and baby food, which have already left in huge quantities for Ukraine and continue to leave every day. I thank you for such incredible support, for such a wave of empathy and sympathy that we receive."
   oksana-vrublevskaya: "Oksana Vrublevskaya"
   arman-shuraev: "Arman Shuraev"
   arman-shuraev-position: "Public figure and entrepreneur"
