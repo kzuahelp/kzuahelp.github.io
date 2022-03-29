@@ -10,7 +10,7 @@ const { t } = useI18n({
 <template>
   <nav :class="$style.navigation">
     <div :class="$style.ribbon">
-      <div :class="$style.howto">{{ t('how-to-help') }}</div>
+      <div :class="$style.howto">{{ t('navigation.how-to-help') }}</div>
       <ul :class="$style.targets">
         <slot />
       </ul>
@@ -66,14 +66,3 @@ const { t } = useI18n({
   }
 }
 </style>
-
-<i18n lang="yaml">
-ru-RU:
-  how-to-help: "Как помочь:"
-kk-KZ:
-  how-to-help: "Көмектесуге болады:"
-ru-UA:
-  how-to-help: "Як допомогти:"
-en-US:
-  how-to-help: "How to help:"
-</i18n>
