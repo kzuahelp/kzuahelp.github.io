@@ -187,15 +187,15 @@ kk-KZ:
   navigation: "Навигация"
   our-mission: "Біздің миссиямыз"
   how-can-you-help: "Сіз қалай көмектесе аласыз"
-  give-things: "Гуманитарлық көмек  көрсетіңіз
-  send-money: "Ақша жіберу "
-  become-volunteer: "Ерікті болыңыз
+  give-things: "Гуманитарлық көмек көрсетіңіз"
+  send-money: "Ақша жіберу"
+  become-volunteer: "Ерікті болыңыз"
   our-friends: "Олар бізге көмектеседі"
   gratitude: "Алғыс"
-  contacts: "Байланыс
+  contacts: "Байланыс"
   embassy-of-ukraine: "Қазақстан Республикасындағы Украина Елшілігі:"
-  volunteer-coordination: "Еріктілерді ұйымдастырушы
-  information-coordination: "Ақпараттық қамтамасыз етуді ұйымдастырушы
+  volunteer-coordination: "Еріктілерді ұйымдастырушы"
+  information-coordination: "Ақпараттық қамтамасыз етуді ұйымдастырушы"
 ru-UA:
   navigation: "Навігація"
   our-mission: "Наша місія"
