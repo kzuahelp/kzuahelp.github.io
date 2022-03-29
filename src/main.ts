@@ -8,6 +8,7 @@ const head = createHead()
 
 
 //// Locale
+import messages from '@intlify/vite-plugin-vue-i18n/messages'
 import { createI18n } from 'vue-i18n'
 const i18n = createI18n({
   locale: 'ru-RU',
@@ -17,6 +18,7 @@ const i18n = createI18n({
   // appears when you open page rendered with SSR
   // https://github.com/intlify/vite-plugin-vue-i18n/issues/102
   legacy: false,
+  messages
 })
 
 
