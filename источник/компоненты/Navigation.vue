@@ -71,7 +71,7 @@ const { t } = useI18n({
 ru-RU:
   how-to-help: "Как помочь:"
 kk-KZ:
-  how-to-help: "Қалай көмектесуге болады
+  how-to-help: "Қалай көмектесуге болады"
 ru-UA:
   how-to-help: "Як допомогти:"
 en-US:
