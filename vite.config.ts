@@ -33,9 +33,6 @@ export default ({ mode }) => {
     build: {
       emptyOutDir: true,
 
-      // Rename "dist" directory especially for github pages
-      outDir: 'docs',
-
       // Disable module preload polyfill due to double request in firefox
       // https://github.com/vitejs/vite/issues/5532
       polyfillModulePreload: false,
