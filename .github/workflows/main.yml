@@ -18,13 +18,13 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2.2.1
 
-      - name: Install and Build
-        run: |
-          pnpm install
-          pnpm build
+      # - name: Install and Build
+      #   run: |
+      #     pnpm install
+      #     pnpm build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          branch: gh-pages
-          folder: docs
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4.2.5
+      #   with:
+      #     branch: gh-pages
+      #     folder: docs
