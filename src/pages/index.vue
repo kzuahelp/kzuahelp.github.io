@@ -415,7 +415,8 @@ p {
 }
 
 .place-info {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   color: rgb(var(--primary-color));
