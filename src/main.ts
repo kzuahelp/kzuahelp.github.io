@@ -6,6 +6,9 @@ import { createApp } from 'vue'
 import { createHead } from '@vueuse/head'
 const head = createHead()
 
+//// Smooth scroll
+import scroll from 'vue3-smooth-scroll'
+
 
 //// Locale
 import messages from '@intlify/vite-plugin-vue-i18n/messages'
@@ -45,4 +48,5 @@ createApp(App)
   .use(router)
   .use(i18n)
   .use(head)
+  .use(scroll)
   .mount('#app')

@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <li :class="$style.choice">
-    <a :href="link" :class="$style.button">
+    <a :href="link" :class="$style.button" v-smooth-scroll>
       <div :class="$style.step">{{ step }}</div>
       <div :class="$style.title">{{ title }}</div>
     </a>
