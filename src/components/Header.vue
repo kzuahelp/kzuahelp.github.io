@@ -18,10 +18,7 @@ const { t, n } = useI18n({
       <div :class="$style.container">
         <h1 :class="$style.title">{{ t('title') }}</h1>
         <div :class="$style.description">{{ t('description') }}</div>
-        <div :class="$style.stats">
-          {{ t('statistics') }}
-          <span :class="$style.sum">{{ n(150934923) }} ₸</span>
-        </div>
+        <div :class="$style.stats">{{ t('statistics', { tons: 140 }) }}</div>
       </div>
     </div>
   </header>
@@ -117,18 +114,18 @@ const { t, n } = useI18n({
 ru-RU:
   title: "Украина, мы с тобой!"
   description: "Штаб гуманитарной поддержки Украины в Казахстане"
-  statistics: "Оказано помощи на сумму более"
+  statistics: "Отправлено более {tons} тонн помощи"
 kk-KZ:
   title: "Украина, біз біргеміз!"
   description: "Қазақстандағы Украинаға гуманитарлық қолдау көрсету штабы"
-  statistics: "Астам көмек көрсетілді."
+  statistics: "{tons} тоннадан астам көмек жіберілді"
 ru-UA:
   title: "Україно, ми з тобою!"
   description: "Штаб гуманітарної підтримки України у Казахстані"
-  statistics: "Надано допомоги на суму понад"
+  statistics: "Надіслано понад {tons} тонн допомоги"
 en-US:
   title: "Ukraine, we are with you!"
   description: "Humanitarian Aid Headquarters for Ukraine in Kazakhstan "
-  statistics: "We collected humanitarian aid worth over"
+  statistics: "More than {tons} tons of aid sent"
 </i18n>
 
