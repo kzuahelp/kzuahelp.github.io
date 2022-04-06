@@ -1,10 +1,23 @@
 
 <script lang="ts" setup>
-//// Localization
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+//// Localization
 const { t } = useI18n({
   inheritLocale: true
 })
+
+//// Reactive variables
+const mailto = ref('#')
+
+//// Local variables
+const mail = computed(() => 'info' + '@' + 'helpukraine.' + 'kz')
+
+//// Events
+const mailShow = function () {
+  mailto.value = 'mailto:' + mail.value
+}
 </script>
 
 <template>
@@ -44,6 +57,18 @@ const { t } = useI18n({
         <div :class="$style.panel">
           <p :class="$style.title">{{ t('contacts') }}</p>
           <dl :class="$style.navigation">
+            <dt>{{ t('volunteer-coordination') }}</dt>
+            <dd>
+              <a href="tel:+77052181357">+7 (705) 218-13-57</a>
+              <br />
+              <a :href="mailto" @mouseenter="mailShow" @touchstart="mailShow">{{ mail }}</a>
+            </dd>
+
+            <dt>Координация информационной поддержки:</dt>
+            <dd>
+              <a href="tel:+77026316062">+7 (702) 631-60-62</a>
+            </dd>
+
             <dt>{{ t('embassy-of-ukraine') }}</dt>
             <dd>
               <a
@@ -54,16 +79,6 @@ const { t } = useI18n({
               <a href="tel:+77172400757">+7 (7172) 40-07-57</a>
               <br />
               <a href="tel:+77076578234">+7 (707) 657-82-34</a>
-            </dd>
-
-            <dt>{{ t('volunteer-coordination') }}</dt>
-            <dd>
-              <a href="tel:+77052181357">+7 (705) 218-13-57</a>
-            </dd>
-
-            <dt>Координация информационной поддержки:</dt>
-            <dd>
-              <a href="tel:+77026316062">+7 (702) 631-60-62</a>
             </dd>
           </dl>
         </div>
