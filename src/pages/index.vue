@@ -224,7 +224,7 @@ const { t } = useI18n({
               <svg fill="currentColor" :class="$style.icon" width="48" height="48">
                 <use href="#icon-place" />
               </svg>
-              <span :class="$style.text">г. Астана, ул. Жылой, 12, м-н Караоктель-2</span>
+              <span :class="$style.text">{{ t('point-place-address') }}</span>
             </div>
             <div>{{ t('point-place-working-time') }}</div>
             <div :class="$style['place-info']">
@@ -570,6 +570,7 @@ ru-RU:
   for-childs: "Для детей"
   field-medicine: "Полевая медицина"
   point-place: "Пункт приёма гуманитарной помощи находится в Посольстве Украины в Республике Казахстан по адресу:"
+  point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Время приёма гуманитарной помощи:"
   point-place-working-time-diapason: "10:00 - 19:00 по будням, 11:00 - 16:00 по выходным"
   card-to-bank: "Переведите средства с карты в Нац. Банк Украины:"
@@ -614,6 +615,7 @@ kk-KZ:
   for-childs: "Балаларға арналған"
   field-medicine: "Дала медицинасы"
   point-place: "Гуманитарлық көмекті қабылдау пункті, Украинаның Қазақстан Республикасындағы Елшілігі, мына мекен-жай бойынша орналасқан:"
+  point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Гуманитарлық көмекті қабылдау уақыты:"
   point-place-working-time-diapason: "жұмыс күндері 10:00-19:00, демалыс күндері 11:00-16:00"
   card-to-bank: "Картадан Nat-қа ақша аударыңыз. Украина банкі:"
@@ -657,6 +659,7 @@ ru-UA:
   for-childs: "Для дітей"
   field-medicine: "Польова медицина"
   point-place: "Пункт прийому гуманітарної допомоги знаходиться в Посольстві України в Республіці Казахстан за адресою:"
+  point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Час прийому гуманітарної допомоги:"
   point-place-working-time-diapason: "10:00-19:00 по буднях, 11:00 - 16:00 у вихідні"
   card-to-bank: "Зробити переказ коштів з картки до Нац. Банку України:"
@@ -700,6 +703,7 @@ en-US:
   for-childs: "For children"
   field-medicine: "Field medicine"
   point-place: "Humanitarian aid reception facility is located at the Embassy of Ukraine in the Republic of Kazakhstan at the address:"
+  point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Humanitarian aid reception hours:"
   point-place-working-time-diapason: "10:00 - 19:00 on weekdays, 11:00 - 16:00 on weekends"
   card-to-bank: "Transfer funds to Nat. Bank of Ukraine via a bank card:"
