@@ -717,7 +717,7 @@ en-US:
   our-friends: "They help us"
   gratitude: "Acknowledgement"
   appeal-description:
-    "<p>Message from the wife of the Ambassador of Ukraine to the Republic of Kazakhstan:</p>"
+    "<p>Ukrainian Ambassador’s wife addressed the Republic of Kazakhstan:</p>"
   appeal:
     "They open their medicine boxes and bring us the little they have. This is astonishing. I wasn't expecting the people of Kazakhstan to care so much about our tragedy. On behalf of all Ukrainian families, we sincerely thank Kazakhstan citizens for their continuous help and support! This is a great contribution to the development of close relations between the two nations. Our historical paths have so much in common, and we share many tragical experiences of the past. Kazakhstan knows our pain, we can feel it."
   oksana-vrublevskaya: "Oksana Vrublevskaya"
