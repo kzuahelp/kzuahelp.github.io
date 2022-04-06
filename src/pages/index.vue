@@ -328,7 +328,7 @@ const { t } = useI18n({
           </Card>
         </div>
         <div :class="$style.gallery">
-          <img :class="$style.team" src="/photos/5.jpg" />
+          <img :class="$style.team" src="/photos/oksana-vrublevskaya.jpg" />
         </div>
       </div>
     </section>
