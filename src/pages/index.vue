@@ -1,46 +1,48 @@
 <script lang="ts" setup>
 //// Meta
-import { Head } from '@vueuse/head'
-
-//// Components
-import ActionSection from '../components/ActionSection.vue'
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import Map from '../components/Map.vue'
-import Navigation from '../components/Navigation.vue'
-import NavigationChoice from '../components/NavigationChoice.vue'
-import Person from '../components/Person.vue'
-import Card from '../components/Card.vue'
-import Socials from '../components/Socials.vue'
+import { Head } from "@vueuse/head";
 
 // Accordion
 import {
   VueCollapsiblePanelGroup,
   VueCollapsiblePanel,
-} from '@dafcoe/vue-collapsible-panel'
-import '@dafcoe/vue-collapsible-panel/dist/vue-collapsible-panel.css'
+} from "@dafcoe/vue-collapsible-panel";
+import "@dafcoe/vue-collapsible-panel/dist/vue-collapsible-panel.css";
 
 //// Localization
-import { useI18n } from 'vue-i18n'
+import { useI18n } from "vue-i18n";
 const { t } = useI18n({
-  inheritLocale: true
-})
+  inheritLocale: true,
+});
 </script>
 
 <template>
   <Head>
-    <title>{{ t('title') }}</title>
+    <title>{{ t("title") }}</title>
   </Head>
   <Header />
-  <Navigation>
-    <NavigationChoice :step="1" :title="t('give-things')" link="#give-things"></NavigationChoice>
-    <NavigationChoice :step="2" :title="t('send-money')" link="#send-money"></NavigationChoice>
-    <NavigationChoice :step="3" :title="t('become-volunteer')" link="#become-volunteer"></NavigationChoice>
-  </Navigation>
-  <div :class="$style.limiter">
+  <HowToNavigation>
+    <NavigationChoice
+      :step="1"
+      :title="t('how-to-give-things')"
+      link="#give-things"
+    ></NavigationChoice>
+    <NavigationChoice
+      :step="2"
+      :title="t('how-to-send-money')"
+      link="#send-money"
+    ></NavigationChoice>
+    <NavigationChoice
+      :step="3"
+      :title="t('how-to-become-volunteer')"
+      link="#become-volunteer"
+    ></NavigationChoice>
+  </HowToNavigation>
+
+  <main :class="[$style.main, $style.limiter]">
     <!-- Our mission -->
     <section :class="$style.section">
-      <h2 :class="$style.title" id="our-mission">{{ t('our-mission') }}</h2>
+      <h2 :class="$style.title" id="our-mission">{{ t("our-mission") }}</h2>
       <div :class="$style.grouped">
         <div :class="$style.panel">
           <div v-html="t('our-mission-description')" />
@@ -65,9 +67,12 @@ const { t } = useI18n({
       </div>
     </section>
 
+    <!-- Latest news -->
+    <LatestNews />
+
     <!-- How can you help -->
     <section :class="$style.section">
-      <h2 :class="$style.title" id="how-can-you-help">{{ t('how-can-you-help') }}</h2>
+      <h2 :class="$style.title" id="how-can-you-help">{{ t("how-can-you-help") }}</h2>
       <ActionSection
         :class="$style['action-section']"
         id="give-things"
@@ -80,7 +85,7 @@ const { t } = useI18n({
             <div :class="$style.panel">
               <vue-collapsible-panel-group accordion :class="$style.accordion">
                 <vue-collapsible-panel :expanded="false">
-                  <template #title>{{ t('medicines') }}</template>
+                  <template #title>{{ t("medicines") }}</template>
                   <template #content>
                     <ul>
                       <li>Актовегин</li>
@@ -146,7 +151,7 @@ const { t } = useI18n({
                   </template>
                 </vue-collapsible-panel>
                 <vue-collapsible-panel :expanded="true">
-                  <template #title>{{ t('food') }}</template>
+                  <template #title>{{ t("food") }}</template>
                   <template #content>
                     <ul>
                       <li>Энергетические батончики</li>
@@ -167,7 +172,7 @@ const { t } = useI18n({
                   </template>
                 </vue-collapsible-panel>
                 <vue-collapsible-panel :expanded="false">
-                  <template #title>{{ t('for-childs') }}</template>
+                  <template #title>{{ t("for-childs") }}</template>
                   <template #content>
                     <ul>
                       <li>Детские смеси</li>
@@ -191,7 +196,7 @@ const { t } = useI18n({
                   </template>
                 </vue-collapsible-panel>
                 <vue-collapsible-panel :expanded="false">
-                  <template #title>{{ t('field-medicine') }}</template>
+                  <template #title>{{ t("field-medicine") }}</template>
                   <template #content>
                     <ul>
                       <li>Power bank</li>
@@ -201,7 +206,11 @@ const { t } = useI18n({
                       <li>Гидрогелевые противоожоговые повязки</li>
                       <li>Зубна паста/ Одноразовая бритва</li>
                       <li>Кариматы</li>
-                      <li>Кровоостанавливающие гемостатические бинты. Проверенные фирмы бинтов: кровоспас из локального. Combat Gauze quick clot, Celox gauze, Chito Gauze</li>
+                      <li>
+                        Кровоостанавливающие гемостатические бинты. Проверенные фирмы
+                        бинтов: кровоспас из локального. Combat Gauze quick clot, Celox
+                        gauze, Chito Gauze
+                      </li>
                       <li>Мягкие носилки</li>
                       <li>Назофарингеальные трубки Rusch</li>
                       <li>Ножницы для разрезания одежды или стропорез</li>
@@ -219,19 +228,21 @@ const { t } = useI18n({
             </div>
           </div>
           <div :class="$style.panel">
-            <div>{{ t('point-place') }}</div>
+            <div>{{ t("point-place") }}</div>
             <div :class="$style['place-info']">
               <svg fill="currentColor" :class="$style.icon" width="48" height="48">
                 <use href="#icon-place" />
               </svg>
-              <span :class="$style.text">{{ t('point-place-address') }}</span>
+              <span :class="$style.text">{{ t("point-place-address") }}</span>
             </div>
-            <div>{{ t('point-place-working-time') }}</div>
+            <div>{{ t("point-place-working-time") }}</div>
             <div :class="$style['place-info']">
               <svg fill="currentColor" :class="$style.icon" width="48" height="48">
                 <use href="#icon-time" />
               </svg>
-              <span :class="$style.text">{{ t('point-place-working-time-diapason') }}</span>
+              <span :class="$style.text">{{
+                t("point-place-working-time-diapason")
+              }}</span>
             </div>
 
             <div :class="$style.map">
@@ -250,7 +261,7 @@ const { t } = useI18n({
       >
         <div :class="$style.grouped">
           <div :class="$style.panel">
-            <p>{{ t('card-to-bank') }}</p>
+            <p>{{ t("card-to-bank") }}</p>
             <a
               :class="$style.button"
               target="_blank"
@@ -259,20 +270,16 @@ const { t } = useI18n({
               <svg fill="currentColor" :class="$style.icon" width="48" height="48">
                 <use href="#icon-bank" />
               </svg>
-              <span :class="$style.text">{{ t('go-to-bank-website') }}</span>
+              <span :class="$style.text">{{ t("go-to-bank-website") }}</span>
             </a>
           </div>
           <div :class="$style.panel">
-            <p>{{ t('transfer-to-embasy') }}</p>
+            <p>{{ t("transfer-to-embasy") }}</p>
             <Card>
               ПОСОЛЬСТВО УКРАИНЫ В РЕСПУБЛИКЕ КАЗАХСТАН
-              <br />БИН 020 750 015 536
-              <br />РНН 600 700 130 010
-              <br />ИИК – KZ68601А871002315181
-              <br />в АО “Народный Банк Казахстана” г. Нур-Султан
-              <br />БИК – HSBKKZKX
-              <br />КБЕ 21
-              <br />КНП 119
+              <br />БИН 020 750 015 536 <br />РНН 600 700 130 010 <br />ИИК –
+              KZ68601А871002315181 <br />в АО “Народный Банк Казахстана” г. Нур-Султан
+              <br />БИК – HSBKKZKX <br />КБЕ 21 <br />КНП 119
             </Card>
           </div>
         </div>
@@ -291,7 +298,7 @@ const { t } = useI18n({
               <svg fill="currentColor" :class="$style.icon" width="48" height="48">
                 <use href="#icon-contract" />
               </svg>
-              <span :class="$style.text">{{ t('volunteer-form') }}</span>
+              <span :class="$style.text">{{ t("volunteer-form") }}</span>
             </a>
           </div>
           <div :class="$style.gallery">
@@ -303,7 +310,7 @@ const { t } = useI18n({
 
     <!-- Our friends -->
     <section :class="$style.section">
-      <h2 :class="$style.title">{{ t('our-friends') }}</h2>
+      <h2 :class="$style.title">{{ t("our-friends") }}</h2>
       <div>
         <Person
           :name="t('arman-shuraev')"
@@ -316,14 +323,16 @@ const { t } = useI18n({
 
     <!-- Gratitude -->
     <section :class="$style.section">
-      <h2 :class="$style.title">{{ t('gratitude') }}</h2>
+      <h2 :class="$style.title">{{ t("gratitude") }}</h2>
       <div :class="$style.grouped">
         <div :class="$style.panel">
           <div v-html="t('appeal-description')" />
           <Card>
             <figure :class="$style.quote">
-              <blockquote>{{ t('appeal') }}</blockquote>
-              <figcaption :class="$style.author">{{ t('oksana-vrublevskaya') }}</figcaption>
+              <blockquote>{{ t("appeal") }}</blockquote>
+              <figcaption :class="$style.author">
+                {{ t("oksana-vrublevskaya") }}
+              </figcaption>
             </figure>
           </Card>
         </div>
@@ -332,7 +341,7 @@ const { t } = useI18n({
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <Footer />
 </template>
@@ -438,8 +447,9 @@ p {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+  display: block;
+  margin: 0;
 }
-
 .map {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -449,12 +459,20 @@ p {
 }
 
 .section {
-  margin: 40px;
+  margin: 0 40px 40px;
+}
+
+.main {
+  padding: 40px 0;
 }
 
 @media only screen and (max-width: 1024px) {
   .section {
     margin: 20px;
+  }
+
+  .main {
+    padding: 0;
   }
 }
 
@@ -475,7 +493,8 @@ p {
   color: rgb(var(--accent-color));
   display: flex;
   align-items: center;
-  margin: 0 0 40px;
+  margin: 0;
+  padding: 40px 0;
 
   &::before {
     content: "";
@@ -492,6 +511,7 @@ p {
   .title {
     font-size: 1.8rem;
     margin: 0 0 20px;
+    padding: 20px 0;
 
     &::before {
       width: 60px;
@@ -519,7 +539,9 @@ p {
     gap: 20px;
   }
 }
+
 .images {
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: grid;
@@ -550,13 +572,15 @@ p {
 }
 </style>
 
-
 <i18n lang="yaml">
 ru-RU:
   title: "Штаб гуманитарной поддержки Украины в Казахстане"
   give-things: "Принести гуманитарную помощь"
   send-money: "Отправить деньги"
   become-volunteer: "Стать волонтёром"
+  how-to-give-things: "Куда и какую принести гуманитарную помощь?"
+  how-to-send-money: "Как помочь деньгами?"
+  how-to-become-volunteer: "Как стать волонтёром?"
   our-mission: "Наша миссия"
   our-mission-description:
     "<p>Наше движение по сбору гуманитарной помощи началось 25 февраля с заявления гражданской инициативы Ел болашағы.</p>
@@ -572,7 +596,7 @@ ru-RU:
   point-place: "Пункт приёма гуманитарной помощи находится в Посольстве Украины в Республике Казахстан по адресу:"
   point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Время приёма гуманитарной помощи:"
-  point-place-working-time-diapason: "10:00 - 19:00 по будням, 11:00 - 16:00 по выходным"
+  point-place-working-time-diapason: "В любой день с 08:00 - 19:00"
   card-to-bank: "Переведите средства с карты в Нац. Банк Украины:"
   transfer-to-embasy: "Переведите средства на счет Посольства по реквизитам:"
   go-to-bank-website: "Перейти на сайт банка"
@@ -587,10 +611,8 @@ ru-RU:
   volunteer-form: "Заполнить анкету волонтёра"
   our-friends: "Нам помогают"
   gratitude: "Благодарность"
-  appeal-description:
-    "<p>Обращение супруги Посла Украины в Республике Казахстан:</p>"
-  appeal:
-    "Люди открывают свои домашние аптечки и несут последнее. Это невероятно. Я не ожидала, что наша трагедия так близка народу Казахстану. От имени всех украинских семей мы искренне благодарим казахстанцев за непрерывную помощь и поддержку! Это огромнейший вклад в развитие тесных отношений между нашими народами, у которых есть много общих страниц истории, в том числе трагических. Казахстан понимает нашу боль, мы чувствуем это."
+  appeal-description: "<p>Обращение супруги Посла Украины в Республике Казахстан:</p>"
+  appeal: "Люди открывают свои домашние аптечки и несут последнее. Это невероятно. Я не ожидала, что наша трагедия так близка народу Казахстану. От имени всех украинских семей мы искренне благодарим казахстанцев за непрерывную помощь и поддержку! Это огромнейший вклад в развитие тесных отношений между нашими народами, у которых есть много общих страниц истории, в том числе трагических. Казахстан понимает нашу боль, мы чувствуем это."
   oksana-vrublevskaya: "Оксана Врублевская"
   arman-shuraev: "Арман Шураев"
   arman-shuraev-position: "Общественный деятель и предприниматель"
@@ -599,8 +621,11 @@ ru-RU:
 kk-KZ:
   title: "Қазақстандағы Украинаға гуманитарлық қолдау көрсету штабы"
   give-things: "Гуманитарлық көмек әкелу"
-  send-money: "Қаржылай көмек көрсету "
+  send-money: "Қаржылай көмек көрсету"
   become-volunteer: "Волонтёр болу"
+  how-to-give-things: "Қайда және қандай гуманитарлық көмек әкелу керек?"
+  how-to-send-money: "Ақшамен қалай көмектесуге болады?"
+  how-to-become-volunteer: "Қалай волонтер болуға болады?"
   our-mission: "Біз жайлы"
   our-mission-description:
     "<p>Гуманитарлық көмек 25 ақпанда “Ел болашағы” қозғалысының ынтасымен басталды. </p>
@@ -617,7 +642,7 @@ kk-KZ:
   point-place: "Гуманитарлық көмекті қабылдау пункті, Украинаның Қазақстан Республикасындағы Елшілігі, мына мекен-жай бойынша орналасқан:"
   point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Гуманитарлық көмекті қабылдау уақыты:"
-  point-place-working-time-diapason: "жұмыс күндері 10:00-19:00, демалыс күндері 11:00-16:00"
+  point-place-working-time-diapason: "Кез келген күні сағат 08:00-ден 19:00-ге дейін"
   card-to-bank: "Картадан Nat-қа ақша аударыңыз. Украина банкі:"
   transfer-to-embasy: "Мына мәліметтер бойынша елшілік шотына ақша аударыңыз:"
   go-to-bank-website: "Банктің веб-сайтына өту"
@@ -632,11 +657,9 @@ kk-KZ:
   volunteer-form: "Волонтёр формасын толтырыңыз"
   our-friends: "Бізге қол ұшын бергендер:"
   gratitude: "Алғыс"
-  appeal-description:
-    "<p>Украинаның Қазақстан Республикасындағы Елшісі жұбайының жолдауы:</p>"
-  appeal:
-    "Халық үйіндегі соңғы дәрі-дәрімегін әкелуде. Бұл жан тебірентеді! Біздің қасірет Қазақстан азаматтарына соншалықты жақын болады деп күтпедім. Үздіксіз қолдау мен көмек үшін барлық украин отбасы атынан шын жүректен алғыс айтамыз! Бұл — тарихы ортақ, талай қуанышты күндер мен қайғыны бірге бастан кешірген екі халық арасындағы өзара қарым-қатынасты нығайтуға арналған зор қадам. Қазақстан халқы басымызға түскен ауыр кесапатты түснеді және барынша қолдау көрсетіп отыр. Біз ол көмекті сезінеміз."
-  oksana-vrublevskaya: "Оксана Врублевская" 
+  appeal-description: "<p>Украинаның Қазақстан Республикасындағы Елшісі жұбайының жолдауы:</p>"
+  appeal: "Халық үйіндегі соңғы дәрі-дәрімегін әкелуде. Бұл жан тебірентеді! Біздің қасірет Қазақстан азаматтарына соншалықты жақын болады деп күтпедім. Үздіксіз қолдау мен көмек үшін барлық украин отбасы атынан шын жүректен алғыс айтамыз! Бұл — тарихы ортақ, талай қуанышты күндер мен қайғыны бірге бастан кешірген екі халық арасындағы өзара қарым-қатынасты нығайтуға арналған зор қадам. Қазақстан халқы басымызға түскен ауыр кесапатты түснеді және барынша қолдау көрсетіп отыр. Біз ол көмекті сезінеміз."
+  oksana-vrublevskaya: "Оксана Врублевская"
   arman-shuraev: "Арман Шураев"
   arman-shuraev-position: "Қоғам қайраткері және кәсіпкер"
   arman-shuraev-action: "Ел болашағы” бастамасын қолдап, ауыр жұмыс атқарған волонтёрлердің тағамына 1 миллион теңге бөлген кісі."
@@ -646,6 +669,9 @@ ru-UA:
   give-things: "Принести гуманітарну допомогу"
   send-money: "Відправити гроші"
   become-volunteer: "Стати волонтером"
+  how-to-give-things: "Куди та яку принести гуманітарну допомогу?"
+  how-to-send-money: "Як допомогти грошима?"
+  how-to-become-volunteer: "Як стати волонтером?"
   our-mission: "Наша місія"
   our-mission-description:
     "<p>Наш рух зі збору гуманітарної допомоги розпочався 25 лютого із заяви громадянської ініціативи Ел болашағи.</p>
@@ -661,7 +687,7 @@ ru-UA:
   point-place: "Пункт прийому гуманітарної допомоги знаходиться в Посольстві України в Республіці Казахстан за адресою:"
   point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Час прийому гуманітарної допомоги:"
-  point-place-working-time-diapason: "10:00-19:00 по буднях, 11:00 - 16:00 у вихідні"
+  point-place-working-time-diapason: "Будь-якого дня з 08:00 - 19:00"
   card-to-bank: "Зробити переказ коштів з картки до Нац. Банку України:"
   transfer-to-embasy: "Зробити переказ коштів на рахунок Посольства за реквізитами:"
   go-to-bank-website: "Перейти на сайт банку"
@@ -676,10 +702,8 @@ ru-UA:
   volunteer-form: "Заповнити анкету волонтера"
   our-friends: "Нам допомагають"
   gratitude: "Подяка"
-  appeal-description:
-    "<p>Звернення дружини Посла України у Республіці Казахстан:</p>"
-  appeal:
-    "Люди відкривають свої домашні аптечки і віддають останнє. Це неймовірно. Я не очікувала, що наша трагедія стане такою близькою народові Казахстану. Від імені усіх родин України ми щиро дякуємо громадянам Казахстану за безперервну допомогу та підтримку!Це величезний внесок до розвитку тісних відносин між нашими народами, які мають багато спільних сторінок історії, у тому числі трагічних. Казахстан розуміє наш біль, ми це відчуваємо."
+  appeal-description: "<p>Звернення дружини Посла України у Республіці Казахстан:</p>"
+  appeal: "Люди відкривають свої домашні аптечки і віддають останнє. Це неймовірно. Я не очікувала, що наша трагедія стане такою близькою народові Казахстану. Від імені усіх родин України ми щиро дякуємо громадянам Казахстану за безперервну допомогу та підтримку!Це величезний внесок до розвитку тісних відносин між нашими народами, які мають багато спільних сторінок історії, у тому числі трагічних. Казахстан розуміє наш біль, ми це відчуваємо."
   oksana-vrublevskaya: "Оксана Врубльовська"
   arman-shuraev: "Арман Шураєв"
   arman-shuraev-position: "Громадський діяч та підприємець"
@@ -690,6 +714,9 @@ en-US:
   give-things: "Bring humanitarian aid"
   send-money: "Send money"
   become-volunteer: "Become a volunteer"
+  how-to-give-things: "Where and what kind of humanitarian aid to bring?"
+  how-to-send-money: "How to help with money?"
+  how-to-become-volunteer: "How to become a volunteer?"
   our-mission: "Our mission"
   our-mission-description:
     "<p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
@@ -705,7 +732,7 @@ en-US:
   point-place: "Humanitarian aid reception facility is located at the Embassy of Ukraine in the Republic of Kazakhstan at the address:"
   point-place-address: "г. Астана, ул. Жылой, 12, м-н Караоктель-2"
   point-place-working-time: "Humanitarian aid reception hours:"
-  point-place-working-time-diapason: "10:00 - 19:00 on weekdays, 11:00 - 16:00 on weekends"
+  point-place-working-time-diapason: "Any day from 08:00 - 19:00"
   card-to-bank: "Transfer funds to Nat. Bank of Ukraine via a bank card:"
   transfer-to-embasy: "Transfer funds to the Embassy using the following bank details:"
   go-to-bank-website: "Go to the bank's website"
@@ -720,13 +747,10 @@ en-US:
   volunteer-form: "Volunteer application form"
   our-friends: "They help us"
   gratitude: "Acknowledgement"
-  appeal-description:
-    "<p>Ukrainian Ambassador’s wife addressed the Republic of Kazakhstan:</p>"
-  appeal:
-    "They open their medicine boxes and bring us the little they have. This is astonishing. I wasn't expecting the people of Kazakhstan to care so much about our tragedy. On behalf of all Ukrainian families, we sincerely thank Kazakhstan citizens for their continuous help and support! This is a great contribution to the development of close relations between the two nations. Our historical paths have so much in common, and we share many tragical experiences of the past. Kazakhstan knows our pain, we can feel it."
+  appeal-description: "<p>Ukrainian Ambassador’s wife addressed the Republic of Kazakhstan:</p>"
+  appeal: "They open their medicine boxes and bring us the little they have. This is astonishing. I wasn't expecting the people of Kazakhstan to care so much about our tragedy. On behalf of all Ukrainian families, we sincerely thank Kazakhstan citizens for their continuous help and support! This is a great contribution to the development of close relations between the two nations. Our historical paths have so much in common, and we share many tragical experiences of the past. Kazakhstan knows our pain, we can feel it."
   oksana-vrublevskaya: "Oksana Vrublevskaya"
   arman-shuraev: "Arman Shuraev"
   arman-shuraev-position: "Public figure and entrepreneur"
   arman-shuraev-action: "He supported the initiative of El bolashagy, organized a party for the volunteers who sorted and loaded humanitarian aid, allocated 1 million tenge for food for volunteers."
 </i18n>
-

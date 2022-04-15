@@ -1,23 +1,22 @@
-
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 //// Localization
 const { t } = useI18n({
-  inheritLocale: true
-})
+  inheritLocale: true,
+});
 
 //// Reactive variables
-const mailto = ref('#')
+const mailto = ref("#");
 
 //// Local variables
-const mail = computed(() => 'info' + '@' + 'helpukraine.' + 'kz')
+const mail = computed(() => "info" + "@" + "helpukraine." + "kz");
 
 //// Events
 const mailShow = function () {
-  mailto.value = 'mailto:' + mail.value
-}
+  mailto.value = "mailto:" + mail.value;
+};
 </script>
 
 <template>
@@ -25,43 +24,45 @@ const mailShow = function () {
     <div :class="$style.limiter">
       <div :class="$style.grouped">
         <div :class="$style.panel">
-          <p :class="$style.title">{{ t('navigation') }}</p>
+          <p :class="$style.title">{{ t("navigation") }}</p>
           <ul :class="$style.navigation">
             <li>
-              <a href="/#our-mission">{{ t('our-mission') }}</a>
+              <a href="/#our-mission">{{ t("our-mission") }}</a>
             </li>
             <li>
-              <a href="/#how-can-you-help">{{ t('how-can-you-help') }}</a>
+              <a href="/#how-can-you-help">{{ t("how-can-you-help") }}</a>
 
               <ul>
                 <li>
-                  <a href="/#give-things">{{ t('give-things') }}</a>
+                  <a href="/#give-things">{{ t("give-things") }}</a>
                 </li>
                 <li>
-                  <a href="/#send-money">{{ t('send-money') }}</a>
+                  <a href="/#send-money">{{ t("send-money") }}</a>
                 </li>
                 <li>
-                  <a href="/#become-volunteer">{{ t('become-volunteer') }}</a>
+                  <a href="/#become-volunteer">{{ t("become-volunteer") }}</a>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="/#friends">{{ t('our-friends') }}</a>
+              <a href="/#friends">{{ t("our-friends") }}</a>
             </li>
             <li>
-              <a href="/#gratitude">{{ t('gratitude') }}</a>
+              <a href="/#gratitude">{{ t("gratitude") }}</a>
             </li>
           </ul>
         </div>
         <div :class="$style.panel">
-          <p :class="$style.title">{{ t('contacts') }}</p>
+          <p id="contacts" :class="$style.title">{{ t("contacts") }}</p>
           <dl :class="$style.navigation">
-            <dt>{{ t('volunteer-coordination') }}</dt>
+            <dt>{{ t("volunteer-coordination") }}</dt>
             <dd>
               <a href="tel:+77052181357">+7 (705) 218-13-57</a>
               <br />
-              <a :href="mailto" @mouseenter="mailShow" @touchstart="mailShow">{{ mail }}</a>
+              <a :href="mailto" @mouseenter="mailShow" @touchstart="mailShow">{{
+                mail
+              }}</a>
             </dd>
 
             <dt>Координация информационной поддержки:</dt>
@@ -69,11 +70,12 @@ const mailShow = function () {
               <a href="tel:+77026316062">+7 (702) 631-60-62</a>
             </dd>
 
-            <dt>{{ t('embassy-of-ukraine') }}</dt>
+            <dt>{{ t("embassy-of-ukraine") }}</dt>
             <dd>
               <a
                 href="https://www.google.com/maps/search/%D0%B3.+%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,+%D1%83%D0%BB+%D0%96%D1%8B%D0%BB%D1%8B%D0%BE%D0%B9,12,+%D0%BC-%D0%BD+%D0%9A%D0%B0%D1%80%D0%B0%D0%BE%D1%82%D0%BA%D0%B5%D0%BB%D1%8C/@51.1488554,71.4025348,17z/data=!3m1!4b1"
-              >г. Астана, ул Жылыой,12, м-н Караоткель</a>
+                >г. Астана, ул Жылыой,12, м-н Караоткель</a
+              >
               <br />
 
               <a href="tel:+77172400757">+7 (7172) 40-07-57</a>
@@ -85,7 +87,9 @@ const mailShow = function () {
       </div>
 
       <div :class="$style.footnote">
-        <a href="https://www.flaticon.com/free-icons">Some used icons by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons"
+          >Some used icons by Freepik - Flaticon</a
+        >
         —
         <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
         —
@@ -238,4 +242,3 @@ en-US:
   volunteer-coordination: "Volunteer coordination:"
   information-coordination: "Information support coordination:"
 </i18n>
-

@@ -7,7 +7,7 @@ import { createHead } from '@vueuse/head'
 const head = createHead()
 
 //// Smooth scroll
-import scroll from 'vue3-smooth-scroll'
+import scroll from 'v-smooth-scroll'
 
 
 //// Locale

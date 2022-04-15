@@ -1,13 +1,12 @@
-
 <script lang="ts" setup>
 //// Components
-import Locales from '../components/Locales.vue'
+import Locales from "../components/Locales.vue";
 
 //// Localization
-import { useI18n } from 'vue-i18n'
+import { useI18n } from "vue-i18n";
 const { t, n } = useI18n({
-  inheritLocale: true
-})
+  inheritLocale: true,
+});
 </script>
 
 <template>
@@ -16,12 +15,15 @@ const { t, n } = useI18n({
     <Locales></Locales>
     <div :class="$style.wrapper">
       <div :class="$style.container">
-        <h1 :class="$style.title">{{ t('title') }}</h1>
-        <div :class="$style.description">{{ t('description') }}</div>
-        <div :class="$style.stats">{{ t('statistics', { tons: 140 }) }}</div>
+        <h1 :class="$style.title">{{ t("title") }}</h1>
+        <div :class="$style.description">{{ t("description") }}</div>
+        <a :class="$style.stats" href="#our-mission" v-smooth-scroll>{{
+          t("statistics", { tons: 140 })
+        }}</a>
       </div>
     </div>
   </header>
+  <Navigation />
 </template>
 
 <style lang="postcss" module>
@@ -32,6 +34,7 @@ const { t, n } = useI18n({
   background-position: center;
   position: relative;
 }
+
 .ornament {
   display: block;
   position: absolute;
@@ -39,6 +42,7 @@ const { t, n } = useI18n({
   top: 20px;
   height: calc(100% - 40px);
 }
+
 .wrapper {
   height: 100%;
   background: rgba(var(--primary-color), 0.5);
@@ -70,6 +74,7 @@ const { t, n } = useI18n({
   margin: 0 auto;
   flex-flow: column;
 }
+
 .stats {
   background: rgb(var(--on-primary-color));
   color: rgb(var(--primary-darken-color));
@@ -80,6 +85,13 @@ const { t, n } = useI18n({
   margin-top: 30px;
   border-radius: 4px;
   text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 250ms ease;
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .sum {
@@ -128,4 +140,3 @@ en-US:
   description: "Humanitarian Aid Headquarters for Ukraine in Kazakhstan "
   statistics: "More than {tons} tons of aid sent"
 </i18n>
-

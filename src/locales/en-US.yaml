@@ -1,2 +1,9 @@
 navigation:
-  how-to-help: "How to help:"
+  home: "Home"
+  news: "News"
+  market: "Market"
+  contacts: "Contacts"
+
+sections:
+  news: "News"
+  latest-news: "Latest news"

@@ -5,6 +5,9 @@ import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+//// Markdown
+import markdown from 'vite-plugin-md'
+
 //// Locale
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
 
@@ -13,6 +16,9 @@ import pages from 'vite-plugin-pages'
 
 //// SVG Bundler
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+
+//// Auto Import Components
+import Components from 'unplugin-vue-components/vite'
 
 //// CSS Plugins
 // TODO: Create typescrypt definitions like this
@@ -38,26 +44,52 @@ export default ({ mode }) => {
       polyfillModulePreload: false,
     },
 
-    // server: {
-    //   hmr: {
-    //     port: 443
-    //   }
-    // },
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src')
+        '@': resolve(__dirname, 'src'),
+
+        // Improve performance and reduce bundle size with runtime build only
+        // https://vue-i18n.intlify.dev/guide/advanced/optimization.html
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js'
       },
     },
+
     plugins: [
-      vue(),
-      pages(),
+      vue({
+        include: [/\.vue$/, /\.md$/]
+      }),
+
+      markdown({
+        wrapperClasses: 'article'
+      }),
+
+      pages({
+        // extensions: ['vue', 'md'],
+        // dirs: [
+        //   {
+        //     dir: resolve(__dirname, 'src/pages'),
+        //     baseRoute: ':locale'
+        //   },
+        //   {
+        //     dir: resolve(__dirname, 'src/pages'),
+        //     baseRoute: ''
+        //   }
+        // ]
+      }),
+
       vueI18n({
         include: resolve(__dirname, 'src/locales/**')
       }),
+
       createSvgIconsPlugin({
         iconDirs: [resolve(__dirname, 'src/icons')],
         symbolId: 'icon-[dir]-[name]',
       }),
+
+      Components({
+        dts: true,
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      })
     ],
     css: {
       modules: {

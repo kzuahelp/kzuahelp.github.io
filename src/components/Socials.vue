@@ -29,6 +29,7 @@
 
 <style lang="postcss" module>
 .socials {
+  margin: 0;
   list-style-type: none;
   padding: 0;
   display: grid;
@@ -52,9 +53,10 @@
     text-decoration: none;
     font-size: 1.3rem;
     border-radius: 4px;
+    transition: opacity 250ms ease;
 
     &:hover {
-      opacity: 0.9;
+      opacity: 0.85;
     }
   }
 }

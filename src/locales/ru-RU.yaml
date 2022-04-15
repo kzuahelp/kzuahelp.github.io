@@ -1,2 +1,9 @@
 navigation:
-  how-to-help: "Как помочь:"
+  home: "Главная"
+  news: "Новости"
+  market: "Ярмарка"
+  contacts: "Контакты"
+
+sections:
+  news: "Новости"
+  latest-news: "Последние новости"

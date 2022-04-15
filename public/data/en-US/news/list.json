@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "url": "dve-fury-s-gumanitarnoy-pomoschu-ot-naroda-kazahstana-otpravilas-v-ukrainu",
+    "title": "Two trucks with humanitarian aid from the people of Kazakhstan went to Ukraine",
+    "description": "On March 11, 2022, about 40 tons of humanitarian aid were sent to Ukraine from the cargo warehouse in Nursultan. The cargo will be delivered to Ukraine by land by two trucks. On the cars there are banners with the flags of Ukraine and Kazakhstan and the inscription in two languages: \"Kazakhstan halkynan Ukraine halkyn people. Biz birgemiz!\" Translation: From people of Kazakhstan to people of Ukraine. We are together!",
+    "picture": "/news/1/humanitarian-aid-for-ukraine.jpg",
+    "time": "2022-03-11"
+  },
+  {
+    "id": 2,
+    "url": "esche-tri-fury-otpravilis-v-ukrainu-s-gumanitarnoy-pomoschu",
+    "title": "Three more trucks went to Ukraine with humanitarian aid",
+    "description": "On March 28, 2022, 3 trucks with 45 tons of humanitarian aid from the people of Kazakhstan to the people of Ukraine were sent from the cargo warehouse of the city of Nursultan",
+    "picture": "/news/2/humanitarian-aid-for-ukraine-2.jpg",
+    "time": "2022-03-28"
+  },
+  {
+    "id": 3,
+    "url": "gumanitarnaya-pomosch-iz-kazahstana-priehala-v-uman",
+    "title": "Humanitarian aid from Kazakhstan arrived in Uman",
+    "description": "Two trucks that set off from Nur-Sultan on March 11 last night (March 28) arrived at their destination in Ukraine in Uman (Cherkasy region) and at the moment the cargo of humanitarian aid is distributed to the most affected regions of Kiev",
+    "picture": "/news/3/gumanitarnaya-pomosch.jpg",
+    "time": "2022-03-29"
+  },
+  {
+    "id": 4,
+    "url": "blagotvoritelnaya-yarmarka-v-nur-sultane-sobrala-sredstva-dlya-pomoschi-ukraine",
+    "title": "Charity fair in Nursultan raised funds to help Ukraine",
+    "description": "On April 10, Astana hosted the first charity fair organized by the Humanitarian Aid Headquarters for Ukraine",
+    "picture": "/news/4/yarmarka.jpg",
+    "time": "2022-04-10"
+  },
+  {
+    "id": 5,
+    "url": "vecher-ukrainskoy-literatury-proshel-v-nur-sultane",
+    "title": "The evening of Ukrainian literature was held in Nur-Sulta",
+    "description": "Astana residents were able to attend a literary evening dedicated to Ukraine. The wonderful @probooks community helped organize the meeting.kz — and the guests plunged into the world of Ukrainian culture for more than an hour",
+    "picture": "/news/5/literary-evening.jpg",
+    "time": "2022-04-11"
+  },
+  {
+    "id": 6,
+    "url": "blagotvoritelnye-dni-ukrainy-proshli-v-almaty",
+    "title": "Charity \"Days of Ukraine\" were held in Almaty",
+    "description": "On April 9 and 10, a charity event \"Days of Ukraine\" was held in Almaty, organized in support of the Ukrainian people during the war",
+    "picture": "/news/6/almaty.jpg",
+    "time": "2022-04-12"
+  }
+]

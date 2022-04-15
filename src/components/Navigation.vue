@@ -1,68 +1,80 @@
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
 
-<script lang="ts" setup>
 //// Localization
-import { useI18n } from 'vue-i18n'
 const { t } = useI18n({
-  inheritLocale: true
-})
+  inheritLocale: true,
+});
 </script>
 
 <template>
   <nav :class="$style.navigation">
-    <div :class="$style.ribbon">
-      <div :class="$style.howto">{{ t('navigation.how-to-help') }}</div>
-      <ul :class="$style.targets">
-        <slot />
-      </ul>
-    </div>
+    <ul :class="$style.routes">
+      <li :class="$style.route">
+        <router-link :class="$style.link" to="/">{{ t("navigation.home") }}</router-link>
+      </li>
+      <li :class="$style.route">
+        <router-link :class="$style.link" to="/news">{{
+          t("navigation.news")
+        }}</router-link>
+      </li>
+      <!-- <li :class="$style.route">
+        <router-link :class="$style.link" to="/market">{{
+          t("navigation.market")
+        }}</router-link>
+      </li> -->
+      <li :class="$style.route">
+        <a :class="$style.link" href="#contacts" v-smooth-scroll>{{
+          t("navigation.contacts")
+        }}</a>
+      </li>
+    </ul>
   </nav>
 </template>
 
-<style lang="postcss" module>
-.ribbon {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-}
-
+<style module lang="postcss">
 .navigation {
-  background: rgba(0, 170, 195, 0.1);
-  padding: 20px;
-}
-
-.howto {
-  border-radius: 8px;
-  position: relative;
-  text-decoration: none;
-  color: rgb(var(--primary-color));
-  display: flex;
-  align-items: center;
-  font-size: 2.5rem;
-  margin-right: 20px;
-  white-space: nowrap;
-}
-
-.targets {
+  background: #dbf0ea;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+.routes {
   list-style-type: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
   margin: 0;
+  padding: 0;
+  display: flex;
+  max-width: 1280px;
+}
+
+.route {
+  margin: 0 20px;
+}
+
+.link {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: #0e6273;
+  transition: color 250ms ease;
+  white-space: nowrap;
+
+  &:hover {
+    color: #e18611;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  .ribbon {
-    display: block;
+  .navigation {
+    background: #dbf0ea;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
   }
-  .targets {
-    display: block;
-  }
-  .howto {
-    font-size: 1.5rem;
-    margin-right: 0;
+
+  .route {
+    margin: 0;
   }
 }
 </style>

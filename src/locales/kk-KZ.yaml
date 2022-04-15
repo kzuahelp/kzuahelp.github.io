@@ -1,2 +1,9 @@
 navigation:
-  how-to-help: "Көмек тәсілдері:"
+  home: "Басты бет"
+  news: "Жаңалықтар"
+  market: "Жәрмеңке"
+  contacts: "Контактілер"
+
+sections:
+  news: "Жаңалықтар"
+  latest-news: "Соңғы жаңалықтар"
