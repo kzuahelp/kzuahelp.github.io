@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     LatestNews: typeof import('./src/components/LatestNews.vue')['default']
     Locales: typeof import('./src/components/Locales.vue')['default']
     Map: typeof import('./src/components/Map.vue')['default']
+    MarketCard: typeof import('./src/components/MarketCard.vue')['default']
+    MarketForm: typeof import('./src/components/MarketForm.vue')['default']
     Navigation: typeof import('./src/components/Navigation.vue')['default']
     NavigationChoice: typeof import('./src/components/NavigationChoice.vue')['default']
     NewsArticle: typeof import('./src/components/NewsArticle.vue')['default']

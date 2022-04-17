@@ -36,6 +36,13 @@ export default ({ mode }) => {
   // Export Vite config
   // https://vitejs.dev/config/
   return defineConfig({
+    server: {
+      cors: true,
+      headers: {
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      }
+    },
+    
     build: {
       emptyOutDir: true,
 
