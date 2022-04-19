@@ -27,7 +27,6 @@ const props = defineProps<{
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  font-size: 1.25rem;
   overflow: hidden;
   text-decoration: none;
   color: var(--on-primary-color);
@@ -62,5 +61,18 @@ const props = defineProps<{
   margin-top: 15px;
   font-size: 1.2rem;
   line-height: 1.2;
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+    flex-flow: column;
+    display: block;
+  }
+  .picture {
+    width: auto;
+  }
+  .description {
+    font-size: 1rem;
+  }
 }
 </style>

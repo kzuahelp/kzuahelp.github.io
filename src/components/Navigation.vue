@@ -36,8 +36,6 @@ const { t } = useI18n({
 .navigation {
   background: #dbf0ea;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
 }
 
 .routes {
@@ -46,6 +44,8 @@ const { t } = useI18n({
   padding: 0;
   display: flex;
   max-width: 1280px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .route {
@@ -68,13 +68,17 @@ const { t } = useI18n({
 @media only screen and (max-width: 1024px) {
   .navigation {
     background: #dbf0ea;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
   }
 
   .route {
     margin: 0;
+  }
+
+  .link {
+    padding: 20px 10px;
   }
 }
 </style>

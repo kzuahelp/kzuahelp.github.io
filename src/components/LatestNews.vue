@@ -48,7 +48,7 @@ loadNews();
     <template v-slot:second>
       <div :class="$style.minicards">
         <NewsMiniCard
-          v-for="article in latestNews.other"
+          v-for="article in latestNews.other.reverse()"
           :title="article.title"
           :description="article.description"
           :picture="article.picture"

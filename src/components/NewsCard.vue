@@ -90,4 +90,23 @@ const timeString = computed(() => {
   font-size: 1rem;
   text-align: right;
 }
+
+@media only screen and (max-width: 1024px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .square {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: rgba(var(--background-color-color), 0.85);
+    color: rgb(var(--on-background-color));
+    text-shadow: none;
+  }
+}
 </style>
