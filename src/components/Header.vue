@@ -18,7 +18,7 @@ const { t, n } = useI18n({
         <h1 :class="$style.title">{{ t("title") }}</h1>
         <div :class="$style.description">{{ t("description") }}</div>
         <a :class="$style.stats" href="#our-mission" v-smooth-scroll>{{
-          t("statistics", { tons: 140 })
+          t("statistics", { tons: 200 })
         }}</a>
       </div>
     </div>
