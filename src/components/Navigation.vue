@@ -40,7 +40,7 @@ const { t } = useI18n({
 
 .routes {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   max-width: 1280px;
