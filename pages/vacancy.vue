@@ -5,6 +5,8 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n({
   inheritLocale: true,
 });
+
+import vacancies from "../data/lists/vacancies.json"
 </script>
 
 <template>
@@ -12,19 +14,33 @@ const { t } = useI18n({
     <section :class="$style.section">
       <h2 :class="$style.title" :id="id">{{ t("navigation.vacancy") }}</h2>
       <div :class="$style.panel">
-        <p>
-          Наша благотворительная ярмарка в онлайн-формате. Вся прибыль с продажи
-          представленных здесь товаров будет отправлена в качестве гуманитарной помощи
-          народу Украины.
-        </p>
-      </div>
-    </section>
-
-    <section :class="$style.section">
-      <div :class="$style.panel">
-        <p>
-          Наши вакансии
-        </p>
+        <Card v-for="vacancy in vacancies" :class="$style.vacancy">
+          <h3>{{ vacancy.name }}</h3>
+          <p>{{ vacancy.description }}</p>
+          <p><strong>{{ t('vacancy.responsibilities') }}</strong></p>
+          <ul>
+            <li v-for="responsibility in vacancy.responsibilities">
+              {{ responsibility }}
+            </li>
+          </ul>
+          <p><strong>{{ t('vacancy.requirements') }}</strong></p>
+          <ul>
+            <li v-for="requirement in vacancy.requirements">
+              {{ requirement }}
+            </li>
+          </ul>
+          <template v-if="vacancy.schedule">
+            <p><strong>{{ t('vacancy.schedule') }}</strong></p>
+            <p>{{ vacancy.schedule }}</p>
+          </template>
+          <p><strong>{{ t('vacancy.contacts') }}</strong></p>
+          <dl>
+            <template v-for="contact in vacancy.contacts">
+              <dt>{{ contact.name }}</dt>
+              <dd><a :href="`tel:${contact.phone}`">{{ contact.phone }}</a></dd>
+            </template>
+          </dl>
+        </Card>
       </div>
     </section>
   </main>
@@ -32,6 +48,42 @@ const { t } = useI18n({
 
 
 <style module lang="postcss">
+.vacancy {
+  & h3 {
+    margin-top: 0
+  }
+
+  & dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+  }
+
+  & p:last-child,
+  & dl:last-child {
+    margin-bottom: 0;
+  }
+
+  & dt {
+    grid-column-start: 1;
+  }
+
+  & dd {
+    grid-column-start: 2;
+    margin-left: 20px;
+  }
+
+  & a {
+    color: rgb(var(--primary-color));
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(var(--accent-color));
+      text-decoration: underline;
+    }
+  }
+}
+
+
 .section {
   margin: 0 40px 40px;
   font-size: 1.2rem;

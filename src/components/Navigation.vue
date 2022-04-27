@@ -29,6 +29,11 @@ const { t } = useI18n({
         }}</router-link>
       </li>
       <li :class="$style.route">
+        <router-link :class="$style.link" to="/vacancy">{{
+            t("navigation.vacancy")
+        }}</router-link>
+      </li>
+      <li :class="$style.route">
         <a :class="$style.link" href="#contacts" v-smooth-scroll>{{
             t("navigation.contacts")
         }}</a>
