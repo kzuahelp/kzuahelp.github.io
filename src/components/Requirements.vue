@@ -10,8 +10,18 @@ import requirements from "../../data/lists/requirements.json";
 </script>
 
 <template>
-  <vue-collapsible-panel-group></vue-collapsible-panel-group>
-
+  <vue-collapsible-panel-group accordion :class="$style.accordion">
+    <vue-collapsible-panel :expanded="false" v-for="category in requirements">
+      <template #title>{{ category.name }}</template>
+      <template #content>
+        <ul>
+          <li v-for="item in category.items">
+            {{ item }}
+          </li>
+        </ul>
+      </template>
+    </vue-collapsible-panel>
+  </vue-collapsible-panel-group>
 </template>
 
 <style lang="postcss" module>
