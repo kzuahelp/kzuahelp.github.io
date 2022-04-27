@@ -1,1 +1,0 @@
-import{o as e,c as o}from"./index.c807d982.js";const r={class:"article"},m={setup(a,{expose:t}){return t({frontmatter:{title:"Heart, pebbles, colors of the flag of Ukraine",description:"Icon or magnet. 32 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(s,n)=>(e(),o("div",r))}};export{m as default};
