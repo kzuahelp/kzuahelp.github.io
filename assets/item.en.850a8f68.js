@@ -1,0 +1,1 @@
+import{o as e,c as o}from"./index.33ece5ff.js";const a={class:"article"},l={setup(r,{expose:t}){return t({frontmatter:{title:"Coat of arms of Ukraine, \u201CMarble\u201D",description:"Badge or magnet. 32 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(c,n)=>(e(),o("div",a))}};export{l as default};
