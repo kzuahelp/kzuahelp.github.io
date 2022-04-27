@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import vacancies from "../data/lists/vacancies.json"
 import { useI18n } from "vue-i18n";
 
 //// Localization
 const { t } = useI18n({
   inheritLocale: true,
 });
-
-import vacancies from "../data/lists/vacancies.json"
 </script>
 
 <template>
@@ -49,8 +48,16 @@ import vacancies from "../data/lists/vacancies.json"
 
 <style module lang="postcss">
 .vacancy {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   & h3 {
-    margin-top: 0
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 500;
   }
 
   & dl {
