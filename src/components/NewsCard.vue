@@ -7,9 +7,9 @@ const props = defineProps<{
   title: string;
   description: string;
   picture: string;
-  link: string;
+  url: string;
   square?: boolean;
-  time?: string;
+  date?: string;
 }>();
 
 //// Localization
@@ -17,19 +17,19 @@ const { t, locale } = useI18n({
   inheritLocale: true,
 });
 
-const timeString = computed(() => {
-  if (!props.time) return null;
-  return new Date(props.time).toLocaleDateString(locale.value);
+const dateString = computed(() => {
+  if (!props.date) return null;
+  return new Date(props.date).toLocaleDateString(locale.value);
 });
 </script>
 
 <template>
-  <router-link :class="$style.card" :to="link">
+  <router-link :class="$style.card" :to="url">
     <img :class="$style.picture" :src="picture" />
-    <div :class="[$style.info, { [$style.square]: square, [$style.timed]: time }]">
+    <div :class="[$style.info, { [$style.square]: square, [$style.timed]: date }]">
       <div :class="$style.title">{{ title }}</div>
       <div :class="$style.description">{{ description }}</div>
-      <div v-if="time" :class="$style.time">{{ timeString }}</div>
+      <div v-if="date" :class="$style.time">{{ dateString }}</div>
     </div>
   </router-link>
 </template>

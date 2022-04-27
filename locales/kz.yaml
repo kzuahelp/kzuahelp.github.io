@@ -1,0 +1,10 @@
+navigation:
+  home: "Басты бет"
+  news: "Жаңалықтар"
+  market: "Жәрмеңке"
+  contacts: "Контактілер"
+  vacancy: "Жұмыстар"
+
+sections:
+  news: "Жаңалықтар"
+  latest-news: "Соңғы жаңалықтар"

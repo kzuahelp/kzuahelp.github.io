@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import VueEasyLightbox from 'vue-easy-lightbox'
+
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
 
@@ -6,9 +8,10 @@ import { computed } from "vue";
 const props = defineProps<{
   title: string;
   description: string;
+  picture: string;
   author?: string;
   article?: string;
-  cost?: number;
+  cost?: string;
 }>();
 
 //// Localization
@@ -21,10 +24,6 @@ const authorString = computed(() => {
   return "@" + props.author.substring(props.author.lastIndexOf("/") + 1);
 });
 
-const pictureUrl = computed(() => {
-  return `/market/signs/${props.article}-1024.jpg`;
-});
-
 const orderUrl = computed(() => {
   const formId = "1FAIpQLSePO2cptro1VTLtV0GgJWsU1Z-SpIYbOInQ-dsI-og1JfuTrg";
   const query = new URLSearchParams({
@@ -32,11 +31,21 @@ const orderUrl = computed(() => {
   });
   return `https://docs.google.com/forms/d/e/${formId}/viewform?${query}`;
 });
+
+let lightbox = ref(false)
+
+function handleHide() {
+  lightbox.value = false
+}
+
+function handleShow() {
+  lightbox.value = true
+}
 </script>
 
 <template>
   <div :class="$style.card">
-    <img :class="$style.picture" :src="pictureUrl" />
+    <img @click="handleShow()" :class="$style.picture" :src="picture" />
 
     <div :class="[$style.info]">
       <div :class="$style.title">{{ title }}</div>
@@ -48,8 +57,11 @@ const orderUrl = computed(() => {
         <a :href="author" v-if="author" :class="$style.author">{{ authorString }}</a>
       </div>
 
-      <a target="_blank" :href="orderUrl" :class="$style.button">Заказать {{ cost }} ₸</a>
+      <a target="_blank" :href="orderUrl" :class="$style.button">Заказать {{ cost }}</a>
     </footer>
+
+    <vue-easy-lightbox moveDisabled scrollDisabled :visible="lightbox" :imgs="picture" @hide="handleHide">
+    </vue-easy-lightbox>
   </div>
 </template>
 

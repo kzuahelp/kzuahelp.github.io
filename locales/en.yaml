@@ -1,0 +1,10 @@
+navigation:
+  home: "Home"
+  news: "News"
+  market: "Market"
+  contacts: "Contacts"
+  vacancy: "Jobs"
+
+sections:
+  news: "News"
+  latest-news: "Latest news"

@@ -61,7 +61,7 @@ const mailShow = function () {
               <a href="tel:+77052181357">+7 (705) 218-13-57</a>
               <br />
               <a :href="mailto" @mouseenter="mailShow" @touchstart="mailShow">{{
-                mail
+                  mail
               }}</a>
             </dd>
 
@@ -73,9 +73,8 @@ const mailShow = function () {
             <dt>{{ t("embassy-of-ukraine") }}</dt>
             <dd>
               <a
-                href="https://www.google.com/maps/search/%D0%B3.+%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,+%D1%83%D0%BB+%D0%96%D1%8B%D0%BB%D1%8B%D0%BE%D0%B9,12,+%D0%BC-%D0%BD+%D0%9A%D0%B0%D1%80%D0%B0%D0%BE%D1%82%D0%BA%D0%B5%D0%BB%D1%8C/@51.1488554,71.4025348,17z/data=!3m1!4b1"
-                >г. Астана, ул Жылыой,12, м-н Караоткель</a
-              >
+                href="https://www.google.com/maps/search/%D0%B3.+%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,+%D1%83%D0%BB+%D0%96%D1%8B%D0%BB%D1%8B%D0%BE%D0%B9,12,+%D0%BC-%D0%BD+%D0%9A%D0%B0%D1%80%D0%B0%D0%BE%D1%82%D0%BA%D0%B5%D0%BB%D1%8C/@51.1488554,71.4025348,17z/data=!3m1!4b1">г.
+                Астана, ул Жылыой,12, м-н Караоткель</a>
               <br />
 
               <a href="tel:+77172400757">+7 (7172) 40-07-57</a>
@@ -87,9 +86,7 @@ const mailShow = function () {
       </div>
 
       <div :class="$style.footnote">
-        <a href="https://www.flaticon.com/free-icons"
-          >Some used icons by Freepik - Flaticon</a
-        >
+        <a href="https://www.flaticon.com/free-icons">Some used icons by Freepik - Flaticon</a>
         —
         <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
         —
@@ -152,10 +149,12 @@ const mailShow = function () {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+
   & .panel {
     flex: 1;
     font-size: 1.25rem;
   }
+
   & .gallery {
     flex: 1;
   }
@@ -181,6 +180,7 @@ const mailShow = function () {
   .footer {
     padding: 20px;
   }
+
   .grouped {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -189,7 +189,7 @@ const mailShow = function () {
 </style>
 
 <i18n lang="yaml">
-ru-RU:
+ru:
   navigation: "Навигация"
   our-mission: "Наша миссия"
   how-can-you-help: "Как вы можете помочь"
@@ -202,7 +202,7 @@ ru-RU:
   embassy-of-ukraine: "Посольство Украины в Республике Казахстан:"
   volunteer-coordination: "Координация волонтеров:"
   information-coordination: "Координация информационной поддержки:"
-kk-KZ:
+kz:
   navigation: "Навигация"
   our-mission: "Біздің миссиямыз"
   how-can-you-help: "Сіз қалай көмектесе аласыз"
@@ -215,7 +215,7 @@ kk-KZ:
   embassy-of-ukraine: "Қазақстан Республикасындағы Украина Елшілігі:"
   volunteer-coordination: "Еріктілерді ұйымдастырушы"
   information-coordination: "Ақпараттық қамтамасыз етуді ұйымдастырушы"
-ru-UA:
+ua:
   navigation: "Навігація"
   our-mission: "Наша місія"
   how-can-you-help: "Як ви можете допомогти"
@@ -228,7 +228,7 @@ ru-UA:
   embassy-of-ukraine: "Посольство України в Республіці Казахстан:"
   volunteer-coordination: "Координація волонтерів:"
   information-coordination: "Координація інформаційної підтримки:"
-en-US:
+en:
   navigation: "Navigation"
   our-mission: "Our mission"
   how-can-you-help: "How can you help"

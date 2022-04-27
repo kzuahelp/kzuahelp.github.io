@@ -18,7 +18,7 @@ const { t, n } = useI18n({
         <h1 :class="$style.title">{{ t("title") }}</h1>
         <div :class="$style.description">{{ t("description") }}</div>
         <a :class="$style.stats" href="#our-mission" v-smooth-scroll>{{
-          t("statistics", { tons: 200 })
+            t("statistics", { tons: 200 })
         }}</a>
       </div>
     </div>
@@ -48,6 +48,7 @@ const { t, n } = useI18n({
   background: rgba(var(--primary-color), 0.5);
   padding: 0 20px;
 }
+
 .title {
   color: rgb(var(--on-primary-color));
   text-transform: uppercase;
@@ -57,6 +58,7 @@ const { t, n } = useI18n({
   margin: 0;
   text-align: center;
 }
+
 .description {
   color: rgb(var(--on-primary-color));
   text-shadow: 1px 1px 2px rgba(var(--primary-darken-color), 0.6);
@@ -65,6 +67,7 @@ const { t, n } = useI18n({
   margin-top: 10px;
   text-align: center;
 }
+
 .container {
   height: 100%;
   max-width: 1280px;
@@ -102,9 +105,11 @@ const { t, n } = useI18n({
   .header {
     height: 400px;
   }
+
   .title {
     font-size: 2rem;
   }
+
   .description {
     font-size: 1.25rem;
   }
@@ -123,19 +128,19 @@ const { t, n } = useI18n({
 </style>
 
 <i18n lang="yaml">
-ru-RU:
+ru:
   title: "Украина, мы с тобой!"
   description: "Штаб гуманитарной поддержки Украины в Казахстане"
   statistics: "Отправлено более {tons} тонн помощи"
-kk-KZ:
+kz:
   title: "Украина, біз біргеміз!"
   description: "Қазақстандағы Украинаға гуманитарлық қолдау көрсету штабы"
   statistics: "{tons} тоннадан астам көмек жіберілді"
-ru-UA:
+ua:
   title: "Україно, ми з тобою!"
   description: "Штаб гуманітарної підтримки України у Казахстані"
   statistics: "Надіслано понад {tons} тонн допомоги"
-en-US:
+en:
   title: "Ukraine, we are with you!"
   description: "Humanitarian Aid Headquarters for Ukraine in Kazakhstan "
   statistics: "More than {tons} tons of aid sent"

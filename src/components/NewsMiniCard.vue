@@ -6,12 +6,12 @@ const props = defineProps<{
   title: string;
   description: string;
   picture: string;
-  link: string;
+  url: string;
 }>();
 </script>
 
 <template>
-  <router-link :class="$style.card" :to="link">
+  <router-link :class="$style.card" :to="url">
     <div :class="$style.picture">
       <img :src="picture" />
     </div>
@@ -35,7 +35,6 @@ const props = defineProps<{
 
 .picture {
   width: 180px;
-  background: red;
   flex-shrink: 0;
 
   & img {
@@ -49,6 +48,8 @@ const props = defineProps<{
 
 .info {
   padding: 20px;
+  display: flex;
+  flex-flow: column;
 }
 
 .title {
@@ -61,6 +62,7 @@ const props = defineProps<{
   margin-top: 15px;
   font-size: 1.2rem;
   line-height: 1.2;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -68,9 +70,11 @@ const props = defineProps<{
     flex-flow: column;
     display: block;
   }
+
   .picture {
     width: auto;
   }
+
   .description {
     font-size: 1rem;
   }

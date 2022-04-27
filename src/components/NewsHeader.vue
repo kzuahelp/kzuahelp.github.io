@@ -2,15 +2,13 @@
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
 
-interface Frontmatter {
-  title: string;
-  description: string;
-  picture: string;
-}
 
 //// Properties
 const props = defineProps<{
-  frontmatter: any;
+  title: string;
+  description: string;
+  picture: string;
+  date: string;
 }>();
 
 //// Localization
@@ -19,30 +17,37 @@ const { t, locale } = useI18n({
 });
 
 const timeString = computed(() => {
-  return new Date(props.frontmatter.time).toLocaleDateString(locale.value);
+  return new Date(props.date).toLocaleDateString(locale.value);
 });
 </script>
 
 <template>
-  <header :class="$style.header">
-    <div :class="$style.info">
-      <h1 :class="$style.title">{{ frontmatter.title }}</h1>
-      <div :class="$style.description">
-        {{ frontmatter.description }}
+  <div :class="$style.limiter">
+    <header :class="$style.header">
+      <div :class="$style.info">
+        <h1 :class="$style.title">{{ title }}</h1>
+        <div :class="$style.description">
+          {{ description }}
+        </div>
+        <div :class="$style.time">
+          {{ timeString }}
+        </div>
       </div>
-      <div :class="$style.time">
-        {{ timeString }}
+      <div v-if="picture" :class="$style.picture">
+        <img :src="picture" :alt="title" />
       </div>
-    </div>
-    <div v-if="frontmatter.picture" :class="$style.picture">
-      <img :src="frontmatter.picture" :alt="frontmatter.title" />
-    </div>
-  </header>
+    </header>
+  </div>
 </template>
 
 <style module lang="postcss">
+.limiter {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px 0;
+}
+
 .header {
-  margin-bottom: 40px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(66, 55, 44, 0.2);
   border-radius: 4px;
@@ -57,6 +62,7 @@ const timeString = computed(() => {
   position: relative;
   padding: 56px 0;
   flex: 1;
+  ;
 }
 
 .title {
@@ -69,6 +75,7 @@ const timeString = computed(() => {
 
 .description {
   margin: 20px;
+  font-size: 1.25rem;
 }
 
 .picture {

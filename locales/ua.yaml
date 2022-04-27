@@ -1,0 +1,10 @@
+navigation:
+  home: "Головна"
+  news: "Новини"
+  market: "Ярмарок"
+  contacts: "Контакти"
+  vacancy: "Вакансії"
+
+sections:
+  news: "Новини"
+  latest-news: "Останні новини"

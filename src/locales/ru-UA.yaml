@@ -1,9 +1,0 @@
-navigation:
-  home: "Головна"
-  news: "Новини"
-  market: "Ярмарок"
-  contacts: "Контакти"
-
-sections:
-  news: "Новини"
-  latest-news: "Останні новини"

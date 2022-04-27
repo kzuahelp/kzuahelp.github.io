@@ -6,19 +6,27 @@ const { t, locale } = useI18n({
   useScope: 'global'
 })
 
+const route = useRoute();
+const router = useRouter();
+
 //// Functions
 const setLanguage = function (targetLocale: string) {
   locale.value = targetLocale
   localStorage.setItem('lang', targetLocale)
+
+  if (route.meta.alternate) {
+    const alternatePath = route.meta.alternate.find(path => path.locale === targetLocale)
+    router.push(alternatePath)
+  }
 }
 </script>
 
 <template>
   <ul :class="$style.locales">
-    <li :class="$style.locale" @click="setLanguage('kk-KZ')">KZ</li>
-    <li :class="$style.locale" @click="setLanguage('ru-RU')">RU</li>
-    <li :class="$style.locale" @click="setLanguage('ru-UA')">UA</li>
-    <li :class="$style.locale" @click="setLanguage('en-US')">EN</li>
+    <li :class="$style.locale" @click="setLanguage('kz')">KZ</li>
+    <li :class="$style.locale" @click="setLanguage('ru')">RU</li>
+    <li :class="$style.locale" @click="setLanguage('ua')">UA</li>
+    <li :class="$style.locale" @click="setLanguage('en')">EN</li>
   </ul>
 </template>
 
@@ -35,6 +43,7 @@ const setLanguage = function (targetLocale: string) {
   top: 10px;
   right: 10px;
 }
+
 .locale {
   padding: 10px;
   cursor: pointer;

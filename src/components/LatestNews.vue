@@ -1,61 +1,75 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import { computed, ref, watch } from "vue";
-
 //// Localization
-const { t, locale } = useI18n({
+const { t, locale, fallbackLocale } = useI18n({
   inheritLocale: true,
 });
 
-const news = ref(null);
+const router = useRouter();
 
-const latestNews = computed(() => {
-  if (!news.value) return null;
+function dateDiff(dateStringA: string, dateStringB: string) {
+  return new Date(dateStringB).getTime() - new Date(dateStringA).getTime();
+}
+
+let routes = router.getRoutes()
+
+let latestNews = computed(() => {
+  let posts = []
+
+  let postsByDate = {}
+  for (let i = 0; i < routes.length; i++) {
+    const route = routes[i]
+
+    if (route.meta.layout !== 'news') continue;
+
+    if (!postsByDate[route.meta.date]) {
+      postsByDate[route.meta.date] = []
+    }
+
+    postsByDate[route.meta.date].push(route)
+  }
+
+  for (const [date, localizedPosts] of Object.entries(postsByDate)) {
+    // Return article in current locale
+    const currentLocalePost = localizedPosts.find(post =>
+      post.meta.locale === locale.value
+    )
+
+    if (currentLocalePost) {
+      posts.push(currentLocalePost)
+      continue;
+    };
+
+    // Fallback to default locale
+    posts.push(localizedPosts.find(post => post.meta.locale === fallbackLocale.value))
+  }
+
+  posts = posts.sort((a, b) => dateDiff(a.meta.date, b.meta.date));
+
+  posts = posts.map(post => ({
+    title: post.meta.title,
+    description: post.meta.description,
+    date: post.meta.date,
+    picture: new URL(`../../data/news/${post.meta.date.substring(0, 10)}/picture.jpg`, import.meta.url).href,
+    url: post.path
+  }))
 
   return {
-    last: news.value[news.value.length - 1],
-    other: news.value.slice(-3, -1),
-  };
-});
-
-const createLink = (article) => {
-  return `/news/${article.time.replaceAll("-", "/")}/${article.url}`;
-};
-
-const loadNews = async function () {
-  const response = await fetch(`/data/${locale.value}/news/list.json`);
-  news.value = await response.json();
-};
-
-watch(locale, (value) => {
-  loadNews();
-});
-
-loadNews();
+    last: posts.slice(0, 1)[0],
+    other: posts.slice(1, 3)
+  }
+})
 </script>
 
 <template>
   <Section v-if="latestNews" :title="t('sections.latest-news')" id="latest-news">
     <template v-slot:first>
-      <NewsCard
-        :title="latestNews.last.title"
-        :description="latestNews.last.description"
-        :picture="latestNews.last.picture"
-        :link="createLink(latestNews.last)"
-        :square="true"
-      />
+      <NewsCard :title="latestNews.last.title" :description="latestNews.last.description"
+        :picture="latestNews.last.picture" :url="latestNews.last.url" :square="true" />
     </template>
     <template v-slot:second>
       <div :class="$style.minicards">
-        <NewsMiniCard
-          v-for="article in latestNews.other.reverse()"
-          :title="article.title"
-          :description="article.description"
-          :picture="article.picture"
-          :key="article.id"
-          :class="$style.minicard"
-          :link="createLink(article)"
-        />
+        <NewsMiniCard v-for="article in latestNews.other" :title="article.title" :description="article.description"
+          :picture="article.picture" :key="article.date" :class="$style.minicard" :url="article.url" />
       </div>
     </template>
   </Section>

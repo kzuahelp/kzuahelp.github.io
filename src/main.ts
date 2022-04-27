@@ -1,52 +1,36 @@
 //// Vue stuff
-import { createApp } from 'vue'
-
+import { createApp } from "vue";
+import { createRouter, createWebHashHistory } from "vue-router";
+import { setupLayouts } from "virtual:generated-layouts";
+import generatedRoutes from "virtual:generated-pages";
+import { createHead } from "@vueuse/head";
+import { createI18n } from "vue-i18n";
+import "virtual:svg-icons-register";
+import App from "./App.vue";
+import scroll from "v-smooth-scroll";
 
 //// Meta tags
-import { createHead } from '@vueuse/head'
-const head = createHead()
-
-//// Smooth scroll
-import scroll from 'v-smooth-scroll'
-
+const head = createHead();
 
 //// Locale
-import messages from '@intlify/vite-plugin-vue-i18n/messages'
-import { createI18n } from 'vue-i18n'
+const messages = Object.fromEntries(
+  Object.entries(import.meta.globEager("../locales/*.yaml")).map(
+    ([key, value]) => [key.slice(11, -5), value.default]
+  )
+);
+
 const i18n = createI18n({
-  locale: 'ru-RU',
-  fallbackLocale: 'ru-RU',
-  // Force to use Composition API 
-  // Required to prevent "Not available in legacy mode" error
-  // appears when you open page rendered with SSR
-  // https://github.com/intlify/vite-plugin-vue-i18n/issues/102
+  locale: "ru",
+  fallbackLocale: "ru",
   legacy: false,
-  messages
-})
-
-
-//// Application
-import App from './App.vue'
-
+  messages,
+});
 
 //// Router
-import { createRouter, createWebHashHistory } from 'vue-router'
-import routes from '~pages'
+const routes = setupLayouts(generatedRoutes);
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-})
+});
 
-
-//// SVG icon handler
-// TODO: manualChunks generates different files, create pull request
-// https://github.com/anncwb/vite-plugin-svg-icons/issues/24
-import 'virtual:svg-icons-register'
-
-
-createApp(App)
-  .use(router)
-  .use(i18n)
-  .use(head)
-  .use(scroll)
-  .mount('#app')
+createApp(App).use(router).use(i18n).use(head).use(scroll).mount("#app");

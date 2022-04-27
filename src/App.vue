@@ -5,38 +5,22 @@ const route = useRoute();
 
 //// Functions
 const getLang = function (): string {
-  let lang = localStorage.getItem("lang");
+  const storedLang = localStorage.getItem("lang")
 
-  if (lang) {
-    return lang;
+  if (storedLang) {
+    return storedLang
   }
 
-  lang = navigator.language.toLowerCase();
+  const navigatorLang = navigator.language.toLowerCase();
 
-  switch (lang) {
-    case "ru":
-      return "ru-RU";
-    case "ru-RU":
-      return "ru-RU";
-    case "ua":
-      return "ru-UA";
-    case "ru-UA":
-      return "ru-UA";
-    case "en":
-      return "en-US";
-    case "en-US":
-      return "en-US";
-    case "kk":
-      return "kk-KZ";
-    case "kk-KZ":
-      return "kk-KZ";
-    default:
-      return "ru-RU";
+  if (navigatorLang) {
+    return navigatorLang;
   }
+
+  return 'ru'
 };
 
 //// Localization
-import { useI18n } from "vue-i18n";
 const { locale } = useI18n({
   useScope: "global",
 });
