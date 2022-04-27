@@ -9,7 +9,7 @@ import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 
 //// Markdown Components
-import markdown from "vite-plugin-md";
+import markdown, { meta } from "vite-plugin-md";
 
 //// Locale
 import vueI18n from "@intlify/vite-plugin-vue-i18n";
@@ -84,6 +84,7 @@ export default ({ mode }) => {
 
       markdown({
         wrapperClasses: "article",
+        builders: [meta()],
       }),
 
       vueI18n({
@@ -126,6 +127,7 @@ export default ({ mode }) => {
           { dir: "data/news", baseRoute: ":locale" },
           { dir: "data/market", baseRoute: ":locale" },
           { dir: "data/announcements", baseRoute: ":locale" },
+          { dir: "data/articles", baseRoute: ":locale" },
           { dir: "pages", baseRoute: "" },
         ],
 
@@ -212,6 +214,48 @@ export default ({ mode }) => {
             });
 
             route.path = `/${locale}/news/${date}/${slug}`;
+
+            return route;
+          }
+
+          // Transform "/articles" paths
+          // from: "/articles/date/title.lang.md"
+          // into: "/lang/news/year/month/day/slugged-title"
+          if (route.component.startsWith("/data/articles/")) {
+            const path = resolve(__dirname, route.component.slice(1));
+            const data = path.split("/").reverse();
+            const filename = data[0].split(".").reverse();
+            const date = data[1].split("-").join("/");
+            const locale = filename[1];
+            const md = readFileSync(path, "utf-8");
+            const frontmatter = matter(md);
+            const slug = slugify(frontmatter.data.title);
+            const dir = dirname(path);
+
+            const alternate = readdirSync(dir)
+              .filter(
+                (name) =>
+                  name.endsWith(".md") && !name.endsWith(`.${locale}.md`)
+              )
+              .map((name) => {
+                const data = name.split(".").reverse();
+                const locale = data[1];
+                const slug = slugify(data[2]);
+                const path = `/${locale}/articles/${date}/${slug}`;
+                return { locale, path };
+              });
+
+            route.meta = Object.assign(route.meta || {}, {
+              layout: "articles",
+              date: new Date(data[1]),
+              locale,
+              dir: dirname(route.component),
+              slug,
+              alternate,
+              ...frontmatter.data,
+            });
+
+            route.path = `/${locale}/articles/${date}/${slug}`;
 
             return route;
           }
