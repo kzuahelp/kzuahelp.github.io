@@ -1,1 +1,0 @@
-import{o as e,c as r}from"./index.50c3bd5a.js";const a={class:"article"},i={setup(o,{expose:t}){return t({frontmatter:{title:"Heart, \u201CDawn\u201D, grunge",description:"Badge or magnet. 32 mm, handmade",author:"https://t.me/Irina_7owl",cost:"3000\u20B8"}}),(c,s)=>(e(),r("div",a))}};export{i as default};
