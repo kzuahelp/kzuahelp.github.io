@@ -16,3 +16,5 @@ The atmosphere of the evenings of all two days was brightened up by the projecti
 The “Days of Ukraine” were held in an atmosphere of warmth, unity and cohesion of several hundred Almaty residents, for whom it is important to express support for Ukraine and a position condemning war and aggression.
 
 All proceeds from this event will be directed to humanitarian aid to Ukraine.
+
+Hey, i just make some tests!
