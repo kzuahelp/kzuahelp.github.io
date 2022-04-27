@@ -1,0 +1,1 @@
+import{o as e,c as a}from"./index.2e8738bc.js";const o={class:"article"},l={setup(r,{expose:t}){return t({frontmatter:{title:"Kazakh national pattern, \u201CRed Stone\u201D",description:"Badge or magnet. 32 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(c,s)=>(e(),a("div",o))}};export{l as default};
