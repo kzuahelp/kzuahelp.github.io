@@ -3,16 +3,18 @@ defineProps<{
   title: string;
   id: string;
 }>();
+
+const slots = useSlots();
 </script>
 
 <template>
   <section :class="$style.section">
     <h2 :class="$style.title" :id="id">{{ title }}</h2>
-    <div :class="$style.group">
-      <div :class="$style.panel">
+    <div :class="[$style.group, { [$style.single]: !slots.first || !slots.second }]">
+      <div v-if="slots.first" :class="$style.panel">
         <slot name="first"></slot>
       </div>
-      <div :class="$style.panel">
+      <div v-if="slots.second" :class="$style.panel">
         <slot name="second"></slot>
       </div>
     </div>
@@ -81,5 +83,9 @@ defineProps<{
     grid-template-columns: 1fr;
     gap: 20px;
   }
+}
+
+.single {
+  grid-template-columns: 1fr;
 }
 </style>

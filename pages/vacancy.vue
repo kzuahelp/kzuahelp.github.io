@@ -8,30 +8,26 @@ const { t } = useI18n({
 </script>
 
 <template>
-  <div>
-    <Header />
-    <main :class="[$style.main, $style.limiter]">
-      <section :class="$style.section">
-        <h2 :class="$style.title" :id="id">{{ t("navigation.vacancy") }}</h2>
-        <div :class="$style.panel">
-          <p>
-            Наша благотворительная ярмарка в онлайн-формате. Вся прибыль с продажи
-            представленных здесь товаров будет отправлена в качестве гуманитарной помощи
-            народу Украины.
-          </p>
-        </div>
-      </section>
+  <main :class="[$style.main, $style.limiter]">
+    <section :class="$style.section">
+      <h2 :class="$style.title" :id="id">{{ t("navigation.vacancy") }}</h2>
+      <div :class="$style.panel">
+        <p>
+          Наша благотворительная ярмарка в онлайн-формате. Вся прибыль с продажи
+          представленных здесь товаров будет отправлена в качестве гуманитарной помощи
+          народу Украины.
+        </p>
+      </div>
+    </section>
 
-      <section :class="$style.section">
-        <div :class="$style.panel">
-          <p>
-            Наши вакансии
-          </p>
-        </div>
-      </section>
-    </main>
-    <Footer />
-  </div>
+    <section :class="$style.section">
+      <div :class="$style.panel">
+        <p>
+          Наши вакансии
+        </p>
+      </div>
+    </section>
+  </main>
 </template>
 
 

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 //// Meta
 import { Head } from "@vueuse/head";
-import Requirements from "../src/components/Requirements.vue";
 
 //// Localization
 const { t } = useI18n({
@@ -21,34 +20,8 @@ const { t } = useI18n({
   </HowToNavigation>
 
   <main :class="[$style.main, $style.limiter]">
-    <!-- Our mission -->
-    <section :class="$style.section">
-      <h2 :class="$style.title" id="our-mission">{{ t("our-mission") }}</h2>
-      <div :class="$style.grouped">
-        <div :class="$style.panel">
-          <div v-html="t('our-mission-description')" />
-          <Socials />
-        </div>
-        <div :class="$style.gallery">
-          <ul :class="$style.images">
-            <li :class="$style.image">
-              <img src="/photos/1.jpg" />
-            </li>
-            <li :class="$style.image">
-              <img src="/photos/2.jpg" />
-            </li>
-            <li :class="$style.image">
-              <img src="/photos/3.jpg" />
-            </li>
-            <li :class="$style.image">
-              <img src="/photos/4.jpg" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Latest news -->
+    <OurMission />
+    <LatestAnnouncements />
     <LatestNews />
 
     <!-- How can you help -->
@@ -351,26 +324,6 @@ p {
   }
 }
 
-.images {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.image {
-  background: rgba(0, 0, 0, 0.1);
-
-  & img {
-    width: 100%;
-    display: block;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-}
-
 /* Accordion */
 .accordion-title {
   display: block;
@@ -394,13 +347,6 @@ ru:
   how-to-give-things: "Куда и какую принести гуманитарную помощь?"
   how-to-send-money: "Как помочь деньгами?"
   how-to-become-volunteer: "Как стать волонтёром?"
-  our-mission: "Наша миссия"
-  our-mission-description:
-    "<p>Наше движение по сбору гуманитарной помощи началось 25 февраля с заявления гражданской инициативы Ел болашағы.</p>
-    <p>Ел болашағы запустил движение, организовал волонтеров, призвал казахстанцев помогать мирному населению Украины, которое прямо сейчас нуждается в экстренной гуманитарной помощи в условиях войны.</p>
-    <p>С 13 марта Ел болашағы отошел от движения, и организацией гуманитарной помощи в Украину теперь занимаются сами волонтеры, обычные казахстанцы из Штаба гуманитарной поддержки Украины.</p>
-    <p>На 5 марта поступило более 150 млн тенге от неравнодушных казахстанцев.</p>
-    <p>Наш штаб в социальных сетях:</p>"
   how-can-you-help: "Как вы можете помочь?"
   medicines: "Медицинские приборы и лекарства"
   food: "Продукты питания"
@@ -441,14 +387,6 @@ kz:
   how-to-give-things: "Қайда және қандай гуманитарлық көмек әкелу керек?"
   how-to-send-money: "Ақшамен қалай көмектесуге болады?"
   how-to-become-volunteer: "Қалай волонтер болуға болады?"
-  our-mission: "Біз жайлы"
-  our-mission-description:
-    "<p>Гуманитарлық көмек 25 ақпанда “Ел болашағы” қозғалысының ынтасымен басталды. </p>
-    <p>Осындай әлеуметтік дағдарыс кезінде Қазақстан азаматтарын украин халқына көмек көрсетуге шақырып, барлық волонтёрлердің басын қосқан ұйым атауы “Ел болашағы”.</p>
-    <p>Алайда 13-ші наурыздан бастап “Ел болашағы” бұл қозғалыспен айналысуды тоқтатты.</p>
-    <p>Қазіргі таңда украиндарға септігін тигізіп жатқан гуманитарлық қолдау штабының волонтёрлері, яғни Қазақстанның қарапайым халқы.</p>
-    <p>Бүгінгі ақпарат бойынша еліміздегі әрбір құштар жаннан барлығы 150 млн. ₸ ден астам қаражат түскен.<p>
-    <p>Біздің әлеуметтік желілер:</p>"
   how-can-you-help: "Сіз қалай көмектесе аласыз?"
   medicines: "Медициналық бұйымдар мен дәрі-дәрмектер"
   food: "Азық-түлік"
@@ -489,13 +427,6 @@ ua:
   how-to-give-things: "Куди та яку принести гуманітарну допомогу?"
   how-to-send-money: "Як допомогти грошима?"
   how-to-become-volunteer: "Як стати волонтером?"
-  our-mission: "Наша місія"
-  our-mission-description:
-    "<p>Наш рух зі збору гуманітарної допомоги розпочався 25 лютого із заяви громадянської ініціативи Ел болашағи.</p>
-    <p>Ел болашағи запустив рух, організував волонтерів, закликав казахстанців допомагати мирному населенню України, яке прямо зараз потребує екстреної гуманітарної допомоги в умовах війни.</p>
-    <p>З 13 березня Ел болашағи відійшов від руху, і організацією гуманітарної допомоги в Україну тепер займаються тільки волонтери, звичайні казахстанці зі Штабу гуманітарної підтримки України.</p>
-    <p>Станом на 5 березня надійшло понад 150 млн тенге від небайдужих казахстанців.</p>
-    <p>Наш штаб у соціальних мережах:</p>"
   how-can-you-help: "Як ви можете допомогти?"
   medicines: "Медичні прилади та ліки"
   food: "Продукти харчування"
@@ -536,13 +467,6 @@ en:
   how-to-give-things: "Where and what kind of humanitarian aid to bring?"
   how-to-send-money: "How to help with money?"
   how-to-become-volunteer: "How to become a volunteer?"
-  our-mission: "Our mission"
-  our-mission-description:
-    "<p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
-    <p><i>El bolashagy</i> started the movement, organized volunteers, and called on Kazakhstanis to help the civilian population of Ukraine that needs emergency humanitarian assistance in times of war.</p>
-    <p>After <i>El bolashagy</i> withdrew from the movement on March 13, the initiative was taken over by volunteers — ordinary Kazakhstanis from the Humanitarian Aid Headquarters. Now they are organizing and sending humanitarian aid to Ukraine on their own.</p>
-    <p>As of March 5, more than 150 million tenge (around $300.000) were raised by caring Kazakhstanis.</p>
-    <p>Our headquarters on social networks:</p>"
   how-can-you-help: "How can you help?"
   medicines: "Medical devices and medicines"
   food: "Food"

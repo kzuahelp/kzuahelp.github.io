@@ -21,6 +21,8 @@ declare module "vue-router" {
     article?: string;
     locale?: string;
     date?: string;
+    time?: string;
+    place?: string;
     dir?: string;
     slug?: string;
     alternate?: Alternate;

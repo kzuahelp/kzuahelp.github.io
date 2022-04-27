@@ -14,18 +14,23 @@ const { t } = useI18n({
         <router-link :class="$style.link" to="/">{{ t("navigation.home") }}</router-link>
       </li>
       <li :class="$style.route">
+        <router-link :class="$style.link" to="/announcements">{{
+            t("navigation.announcements")
+        }}</router-link>
+      </li>
+      <li :class="$style.route">
         <router-link :class="$style.link" to="/news">{{
-          t("navigation.news")
+            t("navigation.news")
         }}</router-link>
       </li>
       <li :class="$style.route">
         <router-link :class="$style.link" to="/market">{{
-          t("navigation.market")
+            t("navigation.market")
         }}</router-link>
       </li>
       <li :class="$style.route">
         <a :class="$style.link" href="#contacts" v-smooth-scroll>{{
-          t("navigation.contacts")
+            t("navigation.contacts")
         }}</a>
       </li>
     </ul>
@@ -49,7 +54,7 @@ const { t } = useI18n({
 }
 
 .route {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .link {

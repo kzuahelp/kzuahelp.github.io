@@ -7,9 +7,11 @@ const props = defineProps<{
   title: string;
   description: string;
   picture: string;
-  url: string;
+  url?: string;
   square?: boolean;
+  fullwidth?: boolean;
   date?: string;
+  time?: string;
 }>();
 
 //// Localization
@@ -24,11 +26,12 @@ const dateString = computed(() => {
 </script>
 
 <template>
-  <router-link :class="$style.card" :to="url">
+  <router-link :class="[$style.card, { [$style.fullwidth]: fullwidth }]" :to="url">
     <img :class="$style.picture" :src="picture" />
     <div :class="[$style.info, { [$style.square]: square, [$style.timed]: date }]">
       <div :class="$style.title">{{ title }}</div>
       <div :class="$style.description">{{ description }}</div>
+      <div v-if="props.time">{{ time }}</div>
       <div v-if="date" :class="$style.time">{{ dateString }}</div>
     </div>
   </router-link>
@@ -56,6 +59,8 @@ const dateString = computed(() => {
 .info {
   padding: 20px;
   background: #fff;
+  display: flex;
+  flex-flow: column;
 }
 
 .square {
@@ -76,6 +81,7 @@ const dateString = computed(() => {
 .description {
   line-height: 1.2;
   margin-top: 15px;
+  flex: 1;
 }
 
 .timed {
@@ -89,6 +95,15 @@ const dateString = computed(() => {
   opacity: 0.5;
   font-size: 1rem;
   text-align: right;
+}
+
+.fullwidth {
+  display: flex;
+  flex-flow: row;
+
+  & .picture {
+    width: 570px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -108,5 +123,14 @@ const dateString = computed(() => {
     color: rgb(var(--on-background-color));
     text-shadow: none;
   }
+
+  .fullwidth {
+    flex-flow: column;
+
+    & .picture {
+      width: 100%;
+    }
+  }
+
 }
 </style>

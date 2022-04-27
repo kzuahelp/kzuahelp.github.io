@@ -1,10 +1,19 @@
 navigation:
-  home: "Home"
-  news: "News"
-  market: "Market"
-  contacts: "Contacts"
-  vacancy: "Jobs"
+  home: Home
+  announcements: Announcements
+  news: News
+  market: Market
+  contacts: Contacts
+  vacancy: Jobs
 
 sections:
-  news: "News"
-  latest-news: "Latest news"
+  announcements: Announcements
+  news: News
+  latest-news: Latest news
+  our-mission: Our mission
+  our-mission-description: >-
+    <p>Our movement for collecting humanitarian aid began on February 25 along with the <i>El bolashagy</i> civil initiative statement.</p>
+    <p><i>El bolashagy</i> started the movement, organized volunteers, and called on Kazakhstanis to help the civilian population of Ukraine that needs emergency humanitarian assistance in times of war.</p>
+    <p>After <i>El bolashagy</i> withdrew from the movement on March 13, the initiative was taken over by volunteers — ordinary Kazakhstanis from the Humanitarian Aid Headquarters. Now they are organizing and sending humanitarian aid to Ukraine on their own.</p>
+    <p>As of March 5, more than 150 million tenge (around $300.000) were raised by caring Kazakhstanis.</p>
+    <p>Our headquarters on social networks:</p>
