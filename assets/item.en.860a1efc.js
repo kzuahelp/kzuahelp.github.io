@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,c}from"./index.15b32c1e.js";const r={class:"article"},a={setup(s,{expose:e}){return e({frontmatter:{title:"Peace sign, Multicolored, Hippie Style",description:"Badge (?). 32 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(n,l)=>(o(),c("div",r))}};typeof t=="function"&&t(a);export{a as default};
