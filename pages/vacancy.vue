@@ -11,7 +11,7 @@ const { t } = useI18n({
 <template>
   <main :class="[$style.main, $style.limiter]">
     <section :class="$style.section">
-      <h2 :class="$style.title" :id="id">{{ t("navigation.vacancy") }}</h2>
+      <h2 :class="$style.title" id="vacancy">{{ t("navigation.vacancy") }}</h2>
       <div :class="$style.panel">
         <Card v-for="vacancy in vacancies" :class="$style.vacancy">
           <h3>{{ vacancy.name }}</h3>
