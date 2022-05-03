@@ -21,6 +21,9 @@ let LatestAnnouncements = computed(() => {
 
     if (route.meta.layout !== 'announcements') continue;
 
+    // Skip expired
+    if (new Date(route.meta.date).getTime() < new Date().getTime()) continue;
+
     if (!postsByDate[route.meta.date]) {
       postsByDate[route.meta.date] = []
     }
@@ -53,6 +56,10 @@ let LatestAnnouncements = computed(() => {
     picture: new URL(`../../data/announcements/${post.meta.date.substring(0, 10)}/picture.jpg`, import.meta.url).href,
     url: post.path
   }))
+
+  if (!posts.length) {
+    return null
+  }
 
   return {
     last: posts.slice(0, 1)[0],
