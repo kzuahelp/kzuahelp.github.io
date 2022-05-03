@@ -1,1 +1,0 @@
-import{g as c,r,o as s,c as a,a as e,w as p,F as l,e as m,f as u}from"./index.d921cf3a.js";import{_ as i}from"./NewsArticle.26c1d7d0.js";const f={};function d(g,w){const n=m,o=r("router-view"),t=i,_=u;return s(),a(l,null,[e(n),e(t,null,{default:p(()=>[e(o)]),_:1}),e(_)],64)}var F=c(f,[["render",d]]);export{F as default};
