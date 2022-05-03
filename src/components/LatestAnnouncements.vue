@@ -22,7 +22,7 @@ let LatestAnnouncements = computed(() => {
     if (route.meta.layout !== 'announcements') continue;
 
     // Skip expired
-    if (new Date(route.meta.date).getTime() < new Date().getTime()) continue;
+    if (new Date(route.meta.date).getTime() + 86400000 < new Date().getTime()) continue;
 
     if (!postsByDate[route.meta.date]) {
       postsByDate[route.meta.date] = []

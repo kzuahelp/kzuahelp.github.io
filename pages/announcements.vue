@@ -51,6 +51,7 @@ let announcements = computed(() => {
     title: post.meta.title,
     description: post.meta.description,
     date: post.meta.date,
+    expired: new Date(post.meta.date).getTime() + 86400000 < new Date().getTime(),
     url: post.path,
     picture: new URL(`/data/announcements/${post.meta.date.substring(0, 10)}/picture.jpg`, import.meta.url).href
   }))
@@ -63,7 +64,7 @@ let announcements = computed(() => {
   <main :class="[$style.main, $style.limiter]">
     <div :class="[$style.group, $style.section]">
       <NewsCard v-for="article in announcements" :title="article.title" :description="article.description"
-        :picture="article.picture" :date="article.date" :url="article.url" />
+        :picture="article.picture" :date="article.date" :expired="article.expired" :url="article.url" />
     </div>
   </main>
 </template>

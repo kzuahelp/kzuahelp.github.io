@@ -12,6 +12,7 @@ const props = defineProps<{
   fullwidth?: boolean;
   date?: string;
   time?: string;
+  expired?: boolean;
 }>();
 
 //// Localization
@@ -26,7 +27,7 @@ const dateString = computed(() => {
 </script>
 
 <template>
-  <router-link :class="[$style.card, { [$style.fullwidth]: fullwidth }]" :to="url">
+  <router-link :class="[$style.card, { [$style.fullwidth]: fullwidth }, { [$style.expired]: expired }]" :to="url">
     <img :class="$style.picture" :src="picture" />
     <div :class="[$style.info, { [$style.square]: square, [$style.timed]: date }]">
       <div :class="$style.title">{{ title }}</div>
@@ -38,6 +39,15 @@ const dateString = computed(() => {
 </template>
 
 <style module lang="postcss">
+.expired {
+  filter: grayscale(0.85);
+  opacity: .5;
+
+  & .picture {
+    opacity: .5;
+  }
+}
+
 .card {
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
