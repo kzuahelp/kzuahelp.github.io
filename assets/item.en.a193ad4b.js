@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,c as a}from"./index.9f2b2d27.js";const r={class:"article"},n={setup(c,{expose:e}){return e({frontmatter:{title:'Kazakh national pattern, "Green Stone"',description:"Badge or magnet. 32 mm, handmade",author:"https://t.me/Irina_7owl",cost:"3000\u20B8"}}),(i,m)=>(o(),a("div",r))}};typeof t=="function"&&t(n);export{n as default};
