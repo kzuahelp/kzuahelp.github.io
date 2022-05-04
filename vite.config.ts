@@ -17,6 +17,9 @@ import vueI18n from "@intlify/vite-plugin-vue-i18n";
 //// Filesystem-Based Router
 import Pages from "vite-plugin-pages";
 
+//// Sitemap generation
+import generateSitemap from "vite-plugin-pages-sitemap";
+
 //// Automatic slug generation from title
 import { slugify } from "transliteration";
 
@@ -311,6 +314,13 @@ export default ({ mode }) => {
 
           return route;
         },
+
+        onRoutesGenerated: (routes) =>
+          generateSitemap({
+            routes,
+            readable: true,
+            hostname: "https://helpukraine.kz/",
+          }),
       }),
     ],
     css: {

@@ -21,6 +21,7 @@ specifiers:
   vite: ^2.9.3
   vite-plugin-md: ^0.12.4
   vite-plugin-pages: ^0.22.0
+  vite-plugin-pages-sitemap: ^1.2.2
   vite-plugin-svg-icons: ^2.0.1
   vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.32
@@ -54,6 +55,7 @@ devDependencies:
   vite: 2.9.3
   vite-plugin-md: 0.12.4_vite@2.9.3
   vite-plugin-pages: 0.22.0_vite@2.9.3
+  vite-plugin-pages-sitemap: 1.2.2
   vite-plugin-svg-icons: 2.0.1_vite@2.9.3
   vite-plugin-vue-layouts: 0.6.0_828697fa36817696db8bf4d11e804859
   vue-easy-lightbox: 1.4.1_vue@3.2.32
@@ -2909,6 +2911,10 @@ packages:
       gray-matter: 4.0.3
       markdown-it: 12.3.2
       vite: 2.9.3
+    dev: true
+
+  /vite-plugin-pages-sitemap/1.2.2:
+    resolution: {integrity: sha512-5ZY6ahezIsb0+O0WpRdJ9o6GbBALbPD/ClYX1fna2JgyVbAelvgrl89dnU0NGY76w3+tCDjj02HamjKwhcNU+g==}
     dev: true
 
   /vite-plugin-pages/0.22.0_vite@2.9.3:

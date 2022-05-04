@@ -32,6 +32,7 @@
     "vite": "^2.9.3",
     "vite-plugin-md": "^0.12.4",
     "vite-plugin-pages": "^0.22.0",
+    "vite-plugin-pages-sitemap": "^1.2.2",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-layouts": "^0.6.0",
     "vue-easy-lightbox": "^1.4.1",
