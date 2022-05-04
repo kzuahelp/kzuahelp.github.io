@@ -68,6 +68,7 @@ export default ({ mode }) => {
 
       rollupOptions: {
         input: {
+          // Use 404.html hack to use WebHistory routing on github pages
           main: resolve(__dirname, "404.html"),
         },
       },
