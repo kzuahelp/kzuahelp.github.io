@@ -1,6 +1,6 @@
 //// Vue stuff
 import { createApp } from "vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import { setupLayouts } from "virtual:generated-layouts";
 import generatedRoutes from "virtual:generated-pages";
 import { createHead } from "@vueuse/head";
@@ -29,7 +29,7 @@ const i18n = createI18n({
 //// Router
 const routes = setupLayouts(generatedRoutes);
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 

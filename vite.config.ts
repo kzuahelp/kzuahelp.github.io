@@ -65,6 +65,12 @@ export default ({ mode }) => {
       // Disable module preload polyfill due to double request in firefox
       // https://github.com/vitejs/vite/issues/5532
       polyfillModulePreload: false,
+
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, "404.html"),
+        },
+      },
     },
 
     resolve: {
