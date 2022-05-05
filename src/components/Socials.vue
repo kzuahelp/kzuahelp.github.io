@@ -1,7 +1,7 @@
 <template>
   <ul :class="$style.socials">
     <li :class="[$style.social, $style.telegram]">
-      <a href="https://t.me/aidForUkraineKazakhstanBot" target="_blank">
+      <a href="https://t.me/helpukrainekz" target="_blank">
         <svg fill="currentColor" :class="$style.icon" width="48" height="48">
           <use href="#icon-social-telegram" />
         </svg>
@@ -9,7 +9,7 @@
       </a>
     </li>
     <li :class="[$style.social, $style.facebook]">
-      <a href="https://facebook.com/HelpUkraineAstana" target="_blank">
+      <a href="https://facebook.com/HelpUkraineKZ" target="_blank">
         <svg fill="currentColor" :class="$style.icon" width="48" height="48">
           <use href="#icon-social-facebook" />
         </svg>
