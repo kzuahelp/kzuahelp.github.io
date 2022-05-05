@@ -1,0 +1,1 @@
+import{g as s,o as t,c as a,h as l,n as r}from"./main.bf57fb04.js";const c="pa-pn";var n={article:c};const _={};function o(e,p){return t(),a("article",{class:r(e.$style.article)},[l(e.$slots,"default")],2)}const i={$style:n};var d=s(_,[["render",o],["__cssModules",i]]);export{d as _};
