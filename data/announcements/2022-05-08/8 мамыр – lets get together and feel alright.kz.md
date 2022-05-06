@@ -1,5 +1,5 @@
 ---
-title: "8 мамыр – let ' s get together and feel alright!"
+title: "8 мамыр – let's get together and feel alright!"
 description: "One Love fest – бейбітшілік, махаббат және бірлікті насихаттайтын қайырымдылық фестивалі. Жиналған қаржы Қазақстандағы Украинаның ресми гуманитарлық қолдау штабы @help_ukraine_kz арқылы гуманитарлық көмек сатып алынады"
 ---
 
