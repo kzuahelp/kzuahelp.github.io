@@ -1,0 +1,1 @@
+import{h as r,r as _,o as c,c as s,b as e,F as a,f as m,g as p}from"./main.fd6bdda6.js";const u={};function l(f,i){const o=m,n=_("router-view"),t=p;return c(),s(a,null,[e(o),e(n),e(t)],64)}var g=r(u,[["render",l]]);export{g as default};
