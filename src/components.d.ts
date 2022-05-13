@@ -23,6 +23,7 @@ declare module '@vue/runtime-core' {
     NewsMiniCard: typeof import('./components/NewsMiniCard.vue')['default']
     OurMission: typeof import('./components/OurMission.vue')['default']
     Person: typeof import('./components/Person.vue')['default']
+    Press: typeof import('./components/Press.vue')['default']
     Requirements: typeof import('./components/Requirements.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

@@ -110,6 +110,8 @@ const { t } = useI18n({
       </ActionSection>
     </section>
 
+    <Press/>
+
     <!-- Our friends -->
     <section :class="$style.section">
       <h2 :class="$style.title">{{ t("our-friends") }}</h2>
