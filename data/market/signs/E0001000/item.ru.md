@@ -1,6 +1,6 @@
 ---
 title: Зелёные серьги с керамическими бусинами
 description: Серьги из зелёных деревянных бусин и бело-зелёных керамических бусин, с металлическими подвесками-листиками
-author: @dedra_fun_jewellery
+author: https://instagram.com/dedra_fun_jewellery
 cost: 3000₸
 ---

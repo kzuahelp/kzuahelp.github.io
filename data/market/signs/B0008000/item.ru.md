@@ -1,6 +1,6 @@
 ---
 title: Браслет "Проклятие золотого цветка"
 description: Браслет-цепочка с металлическими цветами золотого цвета и красными камнями
-author: @dedra_fun_jewellery
+author: https://instagram.com/dedra_fun_jewellery
 cost: 6000₸
 ---

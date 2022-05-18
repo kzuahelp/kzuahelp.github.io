@@ -1,6 +1,6 @@
 ---
 title: Браслет с розой
 description: трёхрядный браслет из жёлтого и красного бисера и бусин, с металлической красной розой
-author: @dedra_fun_jewellery
+author: https://instagram.com/dedra_fun_jewellery
 cost: 6000₸
 ---
