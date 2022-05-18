@@ -1,6 +1,6 @@
 ---
 title: Серьги с лазуритом
 description: Серьги в морском стиле из синих искусственных жемчужин, полупрозрачных бусин, золотистых металлических бусин и лазурита
-author: @dedra_fun_jewellery
+author: https://instagram.com/dedra_fun_jewellery
 cost: 3000₸
 ---

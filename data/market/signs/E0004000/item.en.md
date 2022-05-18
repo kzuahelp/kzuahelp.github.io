@@ -1,6 +1,6 @@
 ---
 title: Серьги с бирюзой
 description: Серьги из бирюзы с голубой искусственной жемчужиной и металлическим цветочком
-author: @dedra_fun_jewellery
+author: https://instagram.com/dedra_fun_jewellery
 cost: 3000₸
 ---
