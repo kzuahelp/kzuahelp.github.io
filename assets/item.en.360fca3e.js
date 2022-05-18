@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,c as r}from"./main.fbbd4a02.js";const a={class:"article"},c={setup(n,{expose:e}){return e({frontmatter:{title:"Heart, Yellow and Blue background",description:"Badge. 32 mm, handmade",author:"volunteer",cost:"3000\u20B8"}}),(l,i)=>(o(),r("div",a))}};typeof t=="function"&&t(c);export{c as default};
