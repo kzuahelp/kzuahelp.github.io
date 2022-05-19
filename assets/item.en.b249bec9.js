@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o as r,c}from"./main.250b81ee.js";const e={class:"article"},n={setup(i,{expose:o}){return o({frontmatter:{title:"Painting",description:"Painting, 50\u044570 cm",author:"https://www.instagram.com/trikstertin/",cost:"35000\u20B8"}}),(a,m)=>(r(),c("div",e))}};typeof t=="function"&&t(n);export{n as default};
