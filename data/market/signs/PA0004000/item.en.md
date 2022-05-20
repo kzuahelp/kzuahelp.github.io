@@ -1,6 +1,6 @@
 ---
 title: Painting
-description: Painting, 50х70 cm
+description: Painting, 40х50 cm, acrylic
 author: https://www.instagram.com/trikstertin/
 cost: 35000₸
 ---
