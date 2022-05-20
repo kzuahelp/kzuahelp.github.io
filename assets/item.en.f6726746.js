@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.f8dfc0da.js";const a={class:"article"},c={setup(i,{expose:o}){return o({frontmatter:{title:"Blue Flower Hair Pin",description:"Decorative Hair Pin",author:"https://t.me/Irina_7owl",cost:"1500\u20B8"}}),(s,l)=>(e(),r("div",a))}};typeof t=="function"&&t(c);export{c as default};
