@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.f8dfc0da.js";const a={class:"article"},n={setup(s,{expose:e}){return e({frontmatter:{title:"Coat of arms of Ukraine, Orange",description:"Pendant, side hole, 20 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(i,m)=>(o(),r("div",a))}};typeof t=="function"&&t(n);export{n as default};
