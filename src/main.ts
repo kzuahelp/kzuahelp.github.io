@@ -9,6 +9,9 @@ import "virtual:svg-icons-register";
 import App from "./App.vue";
 import scroll from "v-smooth-scroll";
 
+//// Analytics
+import VueGtag from 'vue-gtag'
+
 //// Meta tags
 const head = createHead();
 
@@ -33,4 +36,15 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).use(router).use(i18n).use(head).use(scroll).mount("#app");
+createApp(App)
+.use(router)
+.use(i18n)
+.use(head)
+.use(scroll)
+// Use Analytics
+.use(VueGtag, {
+  config: {
+    id: 'G-9HXC36845G',
+  }
+})
+.mount("#app");

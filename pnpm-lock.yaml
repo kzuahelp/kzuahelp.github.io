@@ -26,6 +26,7 @@ specifiers:
   vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.32
   vue-easy-lightbox: ^1.4.1
+  vue-gtag: ^2.0.1
   vue-i18n: ^9.1.9
   vue-router: ^4.0.14
   vue-tsc: ^0.29.8
@@ -59,6 +60,7 @@ devDependencies:
   vite-plugin-svg-icons: 2.0.1_vite@2.9.3
   vite-plugin-vue-layouts: 0.6.0_828697fa36817696db8bf4d11e804859
   vue-easy-lightbox: 1.4.1_vue@3.2.32
+  vue-gtag: 2.0.1_vue@3.2.32
   vue-i18n: 9.1.9_vue@3.2.32
   vue-router: 4.0.14_vue@3.2.32
   vue-tsc: 0.29.8_typescript@4.6.3
@@ -3121,6 +3123,14 @@ packages:
   /vue-easy-lightbox/1.4.1_vue@3.2.32:
     resolution: {integrity: sha512-bZHepAokLwiy77qLx45n3WxnLRg4M2gcffpu2Q/H71C7UgSxxXgAmbJdIrtOFni0VwA1rFxkfBBP1Ajn9FY2OA==}
     engines: {node: '>=10.13.0'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.2.32
+    dev: true
+
+  /vue-gtag/2.0.1_vue@3.2.32:
+    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
