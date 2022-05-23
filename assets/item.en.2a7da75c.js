@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.2a1d7d4b.js";const n={class:"article"},a={setup(s,{expose:e}){return e({frontmatter:{title:"Horse and Plants Fridge Magnet",description:"Fridge Magnet",author:"volunteer",cost:"3000\u20B8"}}),(i,l)=>(o(),r("div",n))}};typeof t=="function"&&t(a);export{a as default};
