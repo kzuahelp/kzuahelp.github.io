@@ -1,6 +1,6 @@
 ---
 title: Картина маркером
-description: Картина, 50х70
+description: Картина, 21х30
 author: https://www.instagram.com/trikstertin/
-cost: 35000₸
+cost: 5000₸
 ---
