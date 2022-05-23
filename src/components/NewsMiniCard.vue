@@ -31,6 +31,7 @@ const props = defineProps<{
   text-decoration: none;
   color: var(--on-primary-color);
   display: flex;
+  max-height: 300px;
 }
 
 .picture {
@@ -69,6 +70,7 @@ const props = defineProps<{
   .card {
     flex-flow: column;
     display: block;
+    max-height: auto;
   }
 
   .picture {
