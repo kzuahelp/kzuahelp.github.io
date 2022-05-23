@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.097944ac.js";const a={class:"article"},n={setup(c,{expose:e}){return e({frontmatter:{title:"Sunflower, Yellow, Blue background",description:"Badge or magnet. 32 mm, handmade",author:"volunteer",cost:"3000\u20B8"}}),(l,m)=>(o(),r("div",a))}};typeof t=="function"&&t(n);export{n as default};
