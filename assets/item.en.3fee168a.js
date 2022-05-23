@@ -1,1 +1,0 @@
-import{b as o}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.0f8b5497.js";const c={class:"article"},n={setup(s,{expose:t}){return t({frontmatter:{title:"Blue and Yellow Flower Brooch",description:"Brooch",author:"volunteer",cost:"2000\u20B8"}}),(l,i)=>(e(),r("div",c))}};typeof o=="function"&&o(n);export{n as default};
