@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o as r,e as a}from"./main.be831fa0.js";const c={class:"article"},e={setup(s,{expose:o}){return o({frontmatter:{title:"Postcard",description:"Postcard, Print, \u04106",author:"https://www.instagram.com/okhalay/",cost:"2000\u20B8"}}),(i,m)=>(r(),a("div",c))}};typeof t=="function"&&t(e);export{e as default};

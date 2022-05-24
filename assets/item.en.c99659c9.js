@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.097944ac.js";const n={class:"article"},c={setup(a,{expose:o}){return o({frontmatter:{title:"Painting",description:"Painting, 50x70 cm",author:"volunteer",cost:"100000\u20B8"}}),(s,f)=>(e(),r("div",n))}};typeof t=="function"&&t(c);export{c as default};
