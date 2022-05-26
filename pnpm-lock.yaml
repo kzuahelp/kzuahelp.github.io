@@ -5,12 +5,14 @@ specifiers:
   '@intlify/vite-plugin-vue-i18n': ^3.4.0
   '@types/fs-extra': ^9.0.13
   '@types/leaflet': ^1.7.9
+  '@types/markdown-it': ^12.2.3
   '@vitejs/plugin-vue': ^2.3.1
   '@vue-leaflet/vue-leaflet': ^0.6.1
   '@vueuse/head': ^0.7.6
   date-fns: ^2.28.0
   gray-matter: ^4.0.3
   leaflet: ^1.7.1
+  markdown-it: ^13.0.1
   postcss-nesting: ^10.1.4
   rollup-plugin-cleanup: ^3.2.1
   transliteration: ^2.2.0
@@ -40,12 +42,14 @@ devDependencies:
   '@intlify/vite-plugin-vue-i18n': 3.4.0_vite@2.9.3+vue-i18n@9.1.9
   '@types/fs-extra': 9.0.13
   '@types/leaflet': 1.7.9
+  '@types/markdown-it': 12.2.3
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.3+vue@3.2.32
   '@vue-leaflet/vue-leaflet': 0.6.1_062893c501ef3b3a5e0c8243c4e86192
   '@vueuse/head': 0.7.6_vue@3.2.32
   date-fns: 2.28.0
   gray-matter: 4.0.3
   leaflet: 1.7.1
+  markdown-it: 13.0.1
   postcss-nesting: 10.1.4
   rollup-plugin-cleanup: 3.2.1
   transliteration: 2.2.0
@@ -1906,6 +1910,12 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
+  /linkify-it/4.0.1:
+    resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
+    dependencies:
+      uc.micro: 1.0.6
+    dev: true
+
   /loader-utils/1.4.0:
     resolution: {integrity: sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA==}
     engines: {node: '>=4.0.0'}
@@ -1962,6 +1972,17 @@ packages:
       argparse: 2.0.1
       entities: 2.1.0
       linkify-it: 3.0.3
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
+    dev: true
+
+  /markdown-it/13.0.1:
+    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 3.0.1
+      linkify-it: 4.0.1
       mdurl: 1.0.1
       uc.micro: 1.0.6
     dev: true

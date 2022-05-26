@@ -1,3 +1,4 @@
+import { markdown } from 'vite-plugin-md';
 //// FS Tools
 import { readFileSync, readdirSync } from "fs-extra";
 
@@ -10,6 +11,9 @@ import vue from "@vitejs/plugin-vue";
 
 //// Markdown Components
 import markdown, { meta } from "vite-plugin-md";
+
+import MarkdownIt from 'markdown-it';
+const mdit = new MarkdownIt();
 
 //// Locale
 import vueI18n from "@intlify/vite-plugin-vue-i18n";
@@ -154,6 +158,12 @@ export default ({ mode }) => {
             const locale = filename[1];
             const md = readFileSync(path, "utf-8");
             const frontmatter = matter(md);
+            let content = null;
+
+            if (frontmatter.content) {
+              content = mdit.render(frontmatter.content)
+            }
+
             const slug = slugify(frontmatter.data.title);
             const dir = dirname(path);
 
@@ -179,6 +189,7 @@ export default ({ mode }) => {
               slug,
               alternate,
               ...frontmatter.data,
+              content
             });
 
             route.path = `/${locale}/market/${category}/${article}/${slug}`;

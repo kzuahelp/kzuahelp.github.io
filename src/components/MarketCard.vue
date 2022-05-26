@@ -12,6 +12,7 @@ const props = defineProps<{
   author?: string;
   article?: string;
   cost?: string;
+  content?: string;
 }>();
 
 //// Localization
@@ -49,7 +50,8 @@ function handleShow() {
 
     <div :class="[$style.info]">
       <div :class="$style.title">{{ title }}</div>
-      <div :class="$style.description">{{ description }}</div>
+      <div v-if="description" :class="$style.description">{{ description }}</div>
+      <div v-if="content" :class="$style.description" v-html="content"></div>
     </div>
     <footer :class="$style.footer">
       <div :class="$style.additional">
