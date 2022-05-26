@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.b9655149.js";const n={class:"article"},a={setup(c,{expose:e}){return e({frontmatter:{title:"Light Green Candle",description:"Beeswax Candle",author:"volunteer",cost:"4500\u20B8"}}),(i,l)=>(o(),r("div",n))}};typeof t=="function"&&t(a);export{a as default};
