@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,e as a}from"./main.116b74c3.js";const r={class:"article"},n={setup(s,{expose:e}){return e({frontmatter:{title:"Kazakhstan \u2764 Ukraine",description:"Badge or magnet. 32 mm, handmade",author:"https://t.me/thegello",cost:"3000\u20B8"}}),(m,i)=>(o(),a("div",r))}};typeof t=="function"&&t(n);export{n as default};
