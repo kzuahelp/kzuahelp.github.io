@@ -1,6 +1,16 @@
 ---
-title: Bracelet with a rose
-description: Three-row bacelet from red and yellow beads, with metallic red rose
-author: https://instagram.com/dedra_fun_jewellery
-cost: 6000₸
+title: Bracelet with a rose  
+author: https://instagram.com/dedra_fun_jewellery  
+cost: 4000₸  
 ---
+**Type:** three chain bracele  
+**Size:** 20cm (length of the chain of elements)  
+**Color:** red  
+**Details:** beads, rose  
+
+
+
+
+
+
+
