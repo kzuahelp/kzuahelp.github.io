@@ -1,1 +1,0 @@
-import{j as s,o as t,e as a,k as l,n as r}from"./main.70fc6ce2.js";const n="pa-pn";var c={article:n};const _={};function o(e,p){return t(),a("article",{class:r(e.$style.article)},[l(e.$slots,"default")],2)}const i={$style:c};var d=s(_,[["render",o],["__cssModules",i]]);export{d as _};
