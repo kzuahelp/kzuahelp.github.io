@@ -47,7 +47,6 @@ let items = computed(() => {
   items = items.map(post => ({
     title: post.meta.title,
     description: post.meta.description,
-    content: post.meta.content,
     article: post.meta.article,
     author: post.meta.author,
     cost: post.meta.cost,
@@ -72,7 +71,7 @@ let items = computed(() => {
     </section>
 
     <div :class="[$style.group, $style.section]">
-      <MarketCard v-for="item in items" :key="item.article" :title="item.title" :description="item.description" :content="item.content"
+      <MarketCard v-for="item in items" :key="item.article" :title="item.title" :description="item.description"
         :author="item.author" :article="item.article" :picture="item.picture" :cost="item.cost" />
     </div>
   </main>
