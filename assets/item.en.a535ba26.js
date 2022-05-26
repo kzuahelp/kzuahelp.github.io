@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as r,e}from"./main.c8c6e67b.js";const a={class:"article"},c={setup(s,{expose:o}){return o({frontmatter:{title:"Postcard",description:"Postcard, Print, \u04106",author:"https://www.instagram.com/zarina.kenzhe/",cost:"2000\u20B8"}}),(i,m)=>(r(),e("div",a))}};typeof t=="function"&&t(c);export{c as default};
