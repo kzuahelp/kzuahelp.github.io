@@ -1,0 +1,1 @@
+import{b as e}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.49f6774e.js";const a={class:"article"},n={setup(c,{expose:t}){return t({frontmatter:{title:"Peace sign, Red, Blue and Green background",description:"Badge. 32 mm, handmade",author:"volunteer",cost:"3000\u20B8"}}),(i,m)=>(o(),r("div",a))}};typeof e=="function"&&e(n);export{n as default};
