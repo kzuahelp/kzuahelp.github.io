@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,e}from"./main.6553f921.js";const c={class:"article"},a={setup(s,{expose:r}){return r({frontmatter:{title:"Colorful Dream Catcher",description:"Dream Catcher, 12 cm",author:"https://www.instagram.com/trikstertin/",cost:"5000\u20B8"}}),(i,m)=>(o(),e("div",c))}};typeof t=="function"&&t(a);export{a as default};

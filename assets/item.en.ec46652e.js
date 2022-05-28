@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as r,e}from"./main.b2dd26c9.js";const s={class:"article"},i={setup(a,{expose:o}){return o({frontmatter:{title:"Heart in Ukrainian Flag Colours T-shirt",description:"White t-shirt, size M or L",author:"volunteer",cost:"10000\u20B8"}}),(c,l)=>(r(),e("div",s))}};typeof t=="function"&&t(i);export{i as default};
