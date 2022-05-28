@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.0cee7e80.js";const a={class:"article"},c={setup(i,{expose:o}){return o({frontmatter:{title:"Yellow Rose Hair Pin",description:"Decorative Hair Pin",author:"https://t.me/Irina_7owl",cost:"1000\u20B8"}}),(n,l)=>(e(),r("div",a))}};typeof t=="function"&&t(c);export{c as default};

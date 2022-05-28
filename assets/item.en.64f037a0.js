@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.6553f921.js";const n={class:"article"},a={setup(c,{expose:o}){return o({frontmatter:{title:"Hair Comb Pin, Blue and Orange Flowers",description:"Hair Comb Pin",author:"volunteer",cost:"2000\u20B8"}}),(i,l)=>(e(),r("div",n))}};typeof t=="function"&&t(a);export{a as default};
