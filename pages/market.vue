@@ -51,7 +51,8 @@ let items = computed(() => {
     author: post.meta.author,
     cost: post.meta.cost,
     picture: new URL(`/data/market/${post.meta.category}/${post.meta.article}/picture.jpg`, import.meta.url).href,
-    url: post.path
+    url: post.path,
+    content: post.meta.content
   }))
 
   return items
@@ -71,7 +72,7 @@ let items = computed(() => {
     </section>
 
     <div :class="[$style.group, $style.section]">
-      <MarketCard v-for="item in items" :key="item.article" :title="item.title" :description="item.description"
+      <MarketCard v-for="item in items" :key="item.article" :title="item.title" :description="item.description" :content="item.content"
         :author="item.author" :article="item.article" :picture="item.picture" :cost="item.cost" />
     </div>
   </main>

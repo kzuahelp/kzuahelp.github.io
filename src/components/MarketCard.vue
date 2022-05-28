@@ -15,6 +15,7 @@ const props = defineProps<{
   content?: string;
 }>();
 
+
 //// Localization
 const { t, locale } = useI18n({
   inheritLocale: true,
@@ -51,7 +52,7 @@ function handleShow() {
     <div :class="[$style.info]">
       <div :class="$style.title">{{ title }}</div>
       <div v-if="description" :class="$style.description">{{ description }}</div>
-      <div v-if="content" :class="$style.description" v-html="content"></div>
+      <div v-if="content" :class="$style.description" v-html="content" />
     </div>
     <footer :class="$style.footer">
       <div :class="$style.additional">
