@@ -1,4 +1,9 @@
+//// Legacy browser support
+import legacy from '@vitejs/plugin-legacy'
+
+//// Markdown support
 import { markdown } from 'vite-plugin-md';
+
 //// FS Tools
 import { readFileSync, readdirSync } from "fs-extra";
 
@@ -92,6 +97,10 @@ export default ({ mode }) => {
     },
 
     plugins: [
+      legacy({
+        targets: ['defaults', 'not IE 11']
+      }),
+
       vue({
         include: [/\.vue$/, /\.md$/],
       }),

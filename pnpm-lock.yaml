@@ -6,6 +6,7 @@ specifiers:
   '@types/fs-extra': ^9.0.13
   '@types/leaflet': ^1.7.9
   '@types/markdown-it': ^12.2.3
+  '@vitejs/plugin-legacy': ^1.8.2
   '@vitejs/plugin-vue': ^2.3.1
   '@vue-leaflet/vue-leaflet': ^0.6.1
   '@vueuse/head': ^0.7.6
@@ -43,6 +44,7 @@ devDependencies:
   '@types/fs-extra': 9.0.13
   '@types/leaflet': 1.7.9
   '@types/markdown-it': 12.2.3
+  '@vitejs/plugin-legacy': 1.8.2_vite@2.9.3
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.3+vue@3.2.32
   '@vue-leaflet/vue-leaflet': 0.6.1_062893c501ef3b3a5e0c8243c4e86192
   '@vueuse/head': 0.7.6_vue@3.2.32
@@ -85,6 +87,11 @@ packages:
     resolution: {integrity: sha512-vqUSBLP8dQHFPdPi9bc5GK9vRkYHJ49fsZdtoJ8EQ8ibpwk5rPKfvNIwChB0KVXcIjcepEBBd2VHC5r9Gy8ueg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  /@babel/standalone/7.18.4:
+    resolution: {integrity: sha512-3dDouWyjdS8sJTm6hf8KkJq7fr9ORWMlWGNcMV/Uz2rNnoI6uu8wJGhZ7E65J+x6v8ta9yPbzkUT2YBFcWUbWg==}
+    engines: {node: '>=6.9.0'}
+    dev: true
 
   /@babel/types/7.17.0:
     resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
@@ -295,6 +302,20 @@ packages:
 
   /@types/uuid/8.3.4:
     resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
+    dev: true
+
+  /@vitejs/plugin-legacy/1.8.2_vite@2.9.3:
+    resolution: {integrity: sha512-NCOKU+pU+cxLMR9P9RTolEuOK+h+zYBXlknj+zGcKSj/NXBZYgA1GAH1FnO4zijoWRiTaiOm2ha9LQrELE7XHg==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.8.0
+    dependencies:
+      '@babel/standalone': 7.18.4
+      core-js: 3.22.8
+      magic-string: 0.26.1
+      regenerator-runtime: 0.13.9
+      systemjs: 6.12.1
+      vite: 2.9.3
     dev: true
 
   /@vitejs/plugin-vue/2.3.1_vite@2.9.3+vue@3.2.32:
@@ -752,6 +773,11 @@ packages:
 
   /core-js/3.22.2:
     resolution: {integrity: sha512-Z5I2vzDnEIqO2YhELVMFcL1An2CIsFe9Q7byZhs8c/QxummxZlAHw33TUHbIte987LkisOgL0LwQ1P9D6VISnA==}
+    requiresBuild: true
+    dev: true
+
+  /core-js/3.22.8:
+    resolution: {integrity: sha512-UoGQ/cfzGYIuiq6Z7vWL1HfkE9U9IZ4Ub+0XSiJTCzvbZzgPA69oDF2f+lgJ6dFFLEdjW5O6svvoKzXX23xFkA==}
     requiresBuild: true
     dev: true
 
@@ -2383,6 +2409,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: true
+
   /regex-not/1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
     engines: {node: '>=0.10.0'}
@@ -2711,6 +2741,10 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: true
+
+  /systemjs/6.12.1:
+    resolution: {integrity: sha512-hqTN6kW+pN6/qro6G9OZ7ceDQOcYno020zBQKpZQLsJhYTDMCMNfXi/Y8duF5iW+4WWZr42ry0MMkcRGpbwG2A==}
     dev: true
 
   /to-fast-properties/2.0.0:
