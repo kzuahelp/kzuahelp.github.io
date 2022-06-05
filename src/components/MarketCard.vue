@@ -35,6 +35,12 @@ const authorString = computed(() => {
   return author
 });
 
+const authorUrl = computed(() => {
+  if (!props.author || !props.author.startsWith('http')) return null;
+
+  return props.author;
+});
+
 const orderUrl = computed(() => {
   const formId = "1FAIpQLSePO2cptro1VTLtV0GgJWsU1Z-SpIYbOInQ-dsI-og1JfuTrg";
   const query = new URLSearchParams({
@@ -66,7 +72,12 @@ function handleShow() {
     <footer :class="$style.footer">
       <div :class="$style.additional">
         <span :class="$style.article">Арт. {{ article }}</span>
-        <a :href="author" v-if="author" :class="$style.author">{{ authorString }}</a>
+        <template  v-if="authorUrl">
+          <a :href="authorUrl" :class="$style.author">{{ authorString }}</a>
+        </template>
+        <template  v-else>
+          <span :class="$style.author">{{ authorString }}</span>
+        </template>
       </div>
 
       <a target="_blank" :href="orderUrl" :class="$style.button">Заказать {{ cost }}</a>
