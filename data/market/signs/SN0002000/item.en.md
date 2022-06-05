@@ -3,7 +3,5 @@ title: Purple children's slippers
 author: Volunteer
 cost: 10000₸
 ---
-**Type:** Felted children’s slippers
-**Size:**
-**Color:** Purple
-**Details:**
+**Type:** Felted children’s slippers  
+**Color:** Purple  

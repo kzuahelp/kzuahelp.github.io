@@ -1,10 +1,7 @@
 ---
 title: Tea bag house
-author: https://www.instagram.com/trikstertin/
+author: https://www.instagram.com/trikstertin
 cost: 2500₸
 ---
----
-**Type:** Tea bag house
-**Size:**
-**Color:** Purple
-**Details:**
+**Type:** Tea bag house  
+**Color:** Purple  

@@ -3,7 +3,5 @@ title: Toy Cat
 author: Volunteer
 cost: 4000₸
 ---
-**Type:** soft knitted toy
-**Size:**
-**Color:** yellow
-**Details:**
+**Type:** soft knitted toy  
+**Color:** yellow  

@@ -1,9 +1,7 @@
 ---
 title: Ловец снов
-author: https://www.instagram.com/trikstertin/
+author: https://www.instagram.com/trikstertin
 cost: 2000₸
 ---
-**Тип изделия:** ловец снов
-**Размер:**
-**Цвет:** синий, желтый
-**Вставка:**
+**Тип изделия:** ловец снов  
+**Цвет:** синий, желтый  

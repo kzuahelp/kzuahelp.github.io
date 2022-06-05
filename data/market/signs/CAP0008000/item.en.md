@@ -1,9 +1,7 @@
 ---
-title: "Do!" Snapback hat
+title: “Do!” Snapback hat
 author: Volunteer
 cost: 5000₸
 ---
-**Type:** Snapback hat
-**Size:**
-**Color:** White
-**Details:**
+**Type:** Snapback hat  
+**Color:** White  

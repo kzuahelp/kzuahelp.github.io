@@ -1,9 +1,7 @@
 ---
 title: Чайный домик
-author: https://www.instagram.com/trikstertin/
+author: https://www.instagram.com/trikstertin
 cost: 2500₸
 ---
-**Тип изделия:** чайный домик
-**Размер:**
-**Цвет:** фиолетовый
-**Вставка:**
+**Тип изделия:** чайный домик  
+**Цвет:** фиолетовый  

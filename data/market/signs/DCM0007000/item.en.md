@@ -1,9 +1,7 @@
 ---
 title: Dream catcher
-author: https://www.instagram.com/trikstertin/
+author: https://www.instagram.com/trikstertin
 cost: 2000₸
 ---
-**Type:** Dream catcher
-**Size:**
-**Color:** Blue, brown
-**Details:**
+**Type:** Dream catcher  
+**Color:** Blue, brown  
