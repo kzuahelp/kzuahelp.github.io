@@ -1,1 +1,0 @@
-System.register(["./main-legacy.6f034320.js"],(function(e){"use strict";var t,n,r,u,i,c,s,f;return{setters:[function(e){t=e.j,n=e.r,r=e.o,u=e.e,i=e.f,c=e.F,s=e.h,f=e.i}],execute:function(){e("default",t({},[["render",function(e,t){const o=s,a=n("router-view"),l=f;return r(),u(c,null,[i(o),i(a),i(l)],64)}]]))}}}));
