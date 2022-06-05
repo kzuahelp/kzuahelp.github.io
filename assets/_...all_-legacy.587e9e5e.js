@@ -1,0 +1,1 @@
+System.register(["./main-legacy.6f034320.js"],(function(e){"use strict";var t;return{setters:[function(e){t=e.j}],execute:function(){e("default",t({},[["render",function(e,t){return"Page not found"}]]))}}}));
