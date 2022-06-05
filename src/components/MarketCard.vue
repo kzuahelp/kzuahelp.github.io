@@ -23,7 +23,16 @@ const { t, locale } = useI18n({
 
 const authorString = computed(() => {
   if (!props.author) return null;
-  return "@" + props.author.substring(props.author.lastIndexOf("/") + 1);
+  let author = props.author
+
+  if (author.startsWith('http')) {
+    if (author.endsWith('/')) {
+      author = author.slice(0,-1)
+    }
+    return "@" + author.substring(author.lastIndexOf("/") + 1);
+  }
+
+  return author
 });
 
 const orderUrl = computed(() => {
