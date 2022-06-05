@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as r,e as a}from"./main.0cee7e80.js";const e={class:"article"},s={setup(c,{expose:o}){return o({frontmatter:{title:"Postcard",description:"Postcard, Print, \u04106",author:"https://www.instagram.com/aiivell.sattar/",cost:"1000\u20B8"}}),(n,l)=>(r(),a("div",e))}};typeof t=="function"&&t(s);export{s as default};
