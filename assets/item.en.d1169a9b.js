@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o as r,e}from"./main.8a35a2d2.js";const c={class:"article"},s={setup(a,{expose:o}){return o({frontmatter:{title:"Postcard",description:"Postcard, Print, \u04106",author:"Hades",cost:"1000\u20B8"}}),(i,f)=>(r(),e("div",c))}};typeof t=="function"&&t(s);export{s as default};
