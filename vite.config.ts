@@ -1,5 +1,5 @@
 //// Legacy browser support
-import legacy from '@vitejs/plugin-legacy'
+// import legacy from '@vitejs/plugin-legacy'
 
 //// Markdown support
 import { markdown } from 'vite-plugin-md';
@@ -97,9 +97,9 @@ export default ({ mode }) => {
     },
 
     plugins: [
-      legacy({
-        targets: ['defaults', 'not IE 11']
-      }),
+      // legacy({
+      //   targets: ['defaults', 'not IE 11']
+      // }),
 
       vue({
         include: [/\.vue$/, /\.md$/],
