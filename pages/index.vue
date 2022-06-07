@@ -32,7 +32,7 @@ const { t } = useI18n({
         <div :class="$style.grouped">
           <div :class="$style.panel">
             <div :class="$style.panel">
-              <!-- <Requirements /> -->
+              <Requirements />
             </div>
           </div>
           <div :class="$style.panel">
