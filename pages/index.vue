@@ -32,7 +32,7 @@ const { t } = useI18n({
         <div :class="$style.grouped">
           <div :class="$style.panel">
             <div :class="$style.panel">
-              <Requirements />
+              <!-- <Requirements /> -->
             </div>
           </div>
           <div :class="$style.panel">
@@ -179,7 +179,7 @@ p {
   /* background: #eee; */
   position: relative;
   text-decoration: none;
-  color: rgb(var(--on-primary-color), 0.95);
+  color: rgb(var(--on-primary-color), 0.95) !important;
   display: flex;
   align-items: center;
   transition: background-color 250ms ease;
@@ -304,15 +304,6 @@ p {
   }
 }
 
-a {
-  color: rgb(var(--primary-color));
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .grouped {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -321,6 +312,15 @@ a {
   & .panel {
     flex: 1;
     font-size: 1.25rem;
+
+    & a {
+      color: rgb(var(--primary-color));
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   & .gallery {
