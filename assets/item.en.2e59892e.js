@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.8a35a2d2.js";const a={class:"article"},n={setup(c,{expose:o}){return o({frontmatter:{title:"Coat of arms of Ukraine, Dark Blue",description:"Pendant. 20 mm, handmade",author:"volunteer",cost:"2000\u20B8"}}),(i,m)=>(e(),r("div",a))}};typeof t=="function"&&t(n);export{n as default};

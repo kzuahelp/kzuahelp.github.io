@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o as e,e as r}from"./main.8a35a2d2.js";const s={class:"article"},c={setup(a,{expose:o}){return o({frontmatter:{title:"Postcard",description:"Postcard, Print, \u04106",author:"https://www.instagram.com/kitsune_i_see_you",cost:"1000\u20B8"}}),(i,_)=>(e(),r("div",s))}};typeof t=="function"&&t(c);export{c as default};
