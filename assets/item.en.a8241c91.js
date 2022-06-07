@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.a6e17ca6.js";const a={class:"article"},c={setup(n,{expose:e}){return e({frontmatter:{title:"Peace doves, Ukrainian flag colors, grunge",description:"Badge. 32 mm, handmade",author:"https://t.me/Irina_7owl",cost:"3000\u20B8"}}),(i,m)=>(o(),r("div",a))}};typeof t=="function"&&t(c);export{c as default};
