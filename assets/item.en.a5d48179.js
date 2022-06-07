@@ -1,0 +1,1 @@
+import{b as t}from"./route-block.b5bad31b.js";import{o,e as r}from"./main.a6e17ca6.js";const c={class:"article"},a={setup(n,{expose:e}){return e({frontmatter:{title:"Peace sign, Multicolored, Hippie Style",description:"Pendant. 38 mm, handmade",author:"https://t.me/thegello",cost:"2000\u20B8"}}),(i,l)=>(o(),r("div",c))}};typeof t=="function"&&t(a);export{a as default};
