@@ -1,1 +1,0 @@
-import{b as t}from"./route-block.b5bad31b.js";import{o,e as n}from"./main.207f783f.js";const r={class:"article"},a={setup(c,{expose:e}){return e({frontmatter:{title:"Blue and white pendant",description:"Pendant. 20 mm",author:"volunteer",cost:"2000\u20B8"}}),(i,l)=>(o(),n("div",r))}};typeof t=="function"&&t(a);export{a as default};
