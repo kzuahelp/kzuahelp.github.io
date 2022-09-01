@@ -1,1 +1,0 @@
-import{j as r,r as _,o as c,e as s,f as e,F as a,h as m,i as p}from"./main.fe1ffc52.js";const u={};function l(i,f){const o=m,n=_("router-view"),t=p;return c(),s(a,null,[e(o),e(n),e(t)],64)}var v=r(u,[["render",l]]);export{v as default};
