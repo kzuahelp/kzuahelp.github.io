@@ -24,9 +24,9 @@ const { t } = useI18n({
         }}</router-link>
       </li>
       <li :class="$style.route">
-        <router-link :class="$style.link" to="/market">{{
+        <a :class="$style.link" href="https://www.instagram.com/help_ukraine_market/">{{
             t("navigation.market")
-        }}</router-link>
+        }}</a>
       </li>
       <li :class="$style.route">
         <router-link :class="$style.link" to="/vacancy">{{

@@ -378,7 +378,7 @@ ru:
     <li>Физическое участие в сборе помощи — приём, упаковка, маркировка, погрузка.</li>
     <li>Онлайн участие — консультирование, SMM, дизайн, перевод, поиск информации и прочее.</li>
     <li>Организационная деятельность в сборе помощи.</li>
-    <li>Изготовление продукции для благотворительных ярмарок и нашего <a href=\"/market\">магазина</a>.</li>
+    <li>Изготовление продукции для благотворительных ярмарок и нашего <a href=\"https://www.instagram.com/help_ukraine_market/\">магазина</a>.</li>
     </ul>
     <p>Также вы можете найти актуальные вакансии в <a href=\"/vacancy\">соответствующем разделе</a> сайта.</p>
     <p>Возможно, именно ваши способности и навыки нам пригодятся.</p>"
@@ -420,7 +420,7 @@ kz:
     <li>Гум. көмек жинауға атсалысу - қабылдау, орау, таңбалау, тиеу.</li>
     <li>Онлайн көмек - кеңес беру, SMM, дизайн, аударма, ақпаратты іздеу және т.б.</li>
     <li>Ұйымдық көмек.</li>
-    <li>Қайырымдылық жәрмеңкелеріне және біздің <a href=\"/market\">дүкенге</a> арналған өнімдерді шығару.</li>
+    <li>Қайырымдылық жәрмеңкелеріне және біздің <a href=\"https://www.instagram.com/help_ukraine_market/\">дүкенге</a> арналған өнімдерді шығару.</li>
     </ul>
     <p>Сондай-ақ сайттың <a href=\"/vacancy\">тиісті бөлімінде</a> ағымдағы бос жұмыс орындарын таба аласыз.</p>
     <p>Сіздің қабілеттеріңіз бен дағдыларыңыз бізге пайдалы болуы мүмкін.</p>"
@@ -462,7 +462,7 @@ ua:
     <li>Фізична участь у зборі допомоги - прийоnavigatorLangм, пакування, маркування, завантаження.</li>
     <li>Онлайн участь — консультування, SMM, дизайн, переклад, пошук інформації та інше.</li>
     <li>Організаційна діяльність у зборі допомоги.</li>
-    <li>Виготовлення продукції для благодійних ярмарків та нашого <a href=\"/market\">магазину</a>.</li>
+    <li>Виготовлення продукції для благодійних ярмарків та нашого <a href=\"https://www.instagram.com/help_ukraine_market/\">магазину</a>.</li>
     </ul>
     <p>Також ви можете знайти актуальні <a href=\"/vacancy\">вакансії</a> у відповідному розділі сайту.</p>
     <p>Можливо, саме Ваші здібності та навички нам знадобляться.</p>"
@@ -504,7 +504,7 @@ en:
     <li>On-site assistance: humanitarian aid acceptance, packaging, labeling, loading.</li>
     <li>Online participation - consulting, SMM, design, translation, information search and more.</li>
     <li>Organizational activities in fundraising.</li>
-    <li>Making products for charity fairs and our <a href=\"/market\">store</a>.</li>
+    <li>Making products for charity fairs and our <a href=\"https://www.instagram.com/help_ukraine_market/\">store</a>.</li>
     </ul>
     <p>You can also find current <a href=\"/vacancy\">vacancies</a> in the relevant section of the site.</p>
     <p>Perhaps it is your abilities and skills that will be useful to us.</p>"
