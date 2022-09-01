@@ -148,7 +148,7 @@ export default ({ mode }) => {
         extensions: ["vue", "md"],
         dirs: [
           { dir: "data/news", baseRoute: ":locale" },
-          { dir: "data/market", baseRoute: ":locale" },
+          // { dir: "data/market", baseRoute: ":locale" },
           { dir: "data/announcements", baseRoute: ":locale" },
           { dir: "data/articles", baseRoute: ":locale" },
           { dir: "pages", baseRoute: "" },
@@ -158,53 +158,53 @@ export default ({ mode }) => {
           // Transform "/market" paths
           // from: "/market/date/title.lang.md"
           // into: "/lang/market/type/article/slugged-title"
-          if (route.component.startsWith("/data/market/")) {
-            const path = resolve(__dirname, route.component.slice(1));
-            const data = path.split("/").reverse();
-            const filename = data[0].split(".").reverse();
-            const article = data[1];
-            const category = data[2];
-            const locale = filename[1];
-            const md = readFileSync(path, "utf-8");
-            const frontmatter = matter(md);
-            let content = null;
+          // if (route.component.startsWith("/data/market/")) {
+          //   const path = resolve(__dirname, route.component.slice(1));
+          //   const data = path.split("/").reverse();
+          //   const filename = data[0].split(".").reverse();
+          //   const article = data[1];
+          //   const category = data[2];
+          //   const locale = filename[1];
+          //   const md = readFileSync(path, "utf-8");
+          //   const frontmatter = matter(md);
+          //   let content = null;
 
-            if (frontmatter.content) {
-              content = mdit.render(frontmatter.content)
-            }
+          //   if (frontmatter.content) {
+          //     content = mdit.render(frontmatter.content)
+          //   }
 
-            const slug = slugify(frontmatter.data.title);
-            const dir = dirname(path);
+          //   const slug = slugify(frontmatter.data.title);
+          //   const dir = dirname(path);
 
-            const alternate = readdirSync(dir)
-              .filter(
-                (name) =>
-                  name.endsWith(".md") && !name.endsWith(`.${locale}.md`)
-              )
-              .map((name) => {
-                const data = name.split(".").reverse();
-                const locale = data[1];
-                const slug = slugify(data[2]);
-                const path = `/${locale}/market/${article}/${slug}`;
-                return { locale, path };
-              });
+          //   const alternate = readdirSync(dir)
+          //     .filter(
+          //       (name) =>
+          //         name.endsWith(".md") && !name.endsWith(`.${locale}.md`)
+          //     )
+          //     .map((name) => {
+          //       const data = name.split(".").reverse();
+          //       const locale = data[1];
+          //       const slug = slugify(data[2]);
+          //       const path = `/${locale}/market/${article}/${slug}`;
+          //       return { locale, path };
+          //     });
 
-            route.meta = Object.assign(route.meta || {}, {
-              layout: "market",
-              article: data[1],
-              category,
-              locale,
-              dir: dirname(route.component),
-              slug,
-              alternate,
-              ...frontmatter.data,
-              content
-            });
+          //   route.meta = Object.assign(route.meta || {}, {
+          //     layout: "market",
+          //     article: data[1],
+          //     category,
+          //     locale,
+          //     dir: dirname(route.component),
+          //     slug,
+          //     alternate,
+          //     ...frontmatter.data,
+          //     content
+          //   });
 
-            route.path = `/${locale}/market/${category}/${article}/${slug}`;
+          //   route.path = `/${locale}/market/${category}/${article}/${slug}`;
 
-            return route;
-          }
+          //   return route;
+          // }
 
           // Transform "/news" paths
           // from: "/news/date/title.lang.md"
